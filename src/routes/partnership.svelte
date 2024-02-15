@@ -1,9 +1,9 @@
-<section class="container mx-auto mt-20 max-w-screen-2xl px-10">
+<section class="container mx-auto mt-16 max-w-screen-2xl px-10 xl:mt-20">
 	<h3 class="text-2xl font-semibold">Partner Kami</h3>
 
-	<div class="mt-10 flex items-center justify-between">
+	<div class="mt-8 flex items-center justify-between xl:mt-10">
 		<div
-			class="relative h-20 w-20 transition-all duration-300 ease-in-out 2xl:h-28 2xl:w-28"
+			class="relative h-16 w-20 transition-all duration-300 ease-in-out xl:h-20 2xl:h-28 2xl:w-28"
 		>
 			<img
 				class="h-full w-full object-contain"
@@ -13,7 +13,7 @@
 		</div>
 
 		<div
-			class="relative h-20 w-20 transition-all duration-300 ease-in-out 2xl:h-28 2xl:w-28"
+			class="relative h-16 w-20 transition-all duration-300 ease-in-out xl:h-20 2xl:h-28 2xl:w-28"
 		>
 			<img
 				class="h-full w-full object-contain"
@@ -23,7 +23,7 @@
 		</div>
 
 		<div
-			class="relative h-20 w-20 transition-all duration-300 ease-in-out 2xl:h-28 2xl:w-28"
+			class="relative h-16 w-20 transition-all duration-300 ease-in-out xl:h-20 2xl:h-28 2xl:w-28"
 		>
 			<img
 				class="h-full w-full object-contain"
@@ -33,7 +33,7 @@
 		</div>
 
 		<div
-			class="relative h-20 w-20 transition-all duration-300 ease-in-out 2xl:h-28 2xl:w-28"
+			class="relative h-16 w-20 transition-all duration-300 ease-in-out xl:h-20 2xl:h-28 2xl:w-28"
 		>
 			<img
 				class="h-full w-full object-contain"
@@ -43,7 +43,7 @@
 		</div>
 
 		<div
-			class="relative h-20 w-20 transition-all duration-300 ease-in-out 2xl:h-28 2xl:w-28"
+			class="relative h-16 w-20 transition-all duration-300 ease-in-out xl:h-20 2xl:h-28 2xl:w-28"
 		>
 			<img
 				class="h-full w-full object-contain"
@@ -53,7 +53,7 @@
 		</div>
 
 		<div
-			class="relative h-20 w-20 transition-all duration-300 ease-in-out 2xl:h-28 2xl:w-28"
+			class="relative h-16 w-20 transition-all duration-300 ease-in-out xl:h-20 2xl:h-28 2xl:w-28"
 		>
 			<img
 				class="h-full w-full object-contain"
@@ -63,12 +63,12 @@
 		</div>
 
 		<div
-			class="relative h-20 w-20 transition-all duration-300 ease-in-out 2xl:h-28 2xl:w-28"
+			class="relative h-16 w-20 transition-all duration-300 ease-in-out xl:h-20 2xl:h-28 2xl:w-28"
 		>
 			<img
 				class="h-full w-full object-contain"
 				src="https://bptpntb-ppid.pertanian.go.id/assets/images/portal/logo.png"
-				alt="SMP 2 Mataram Logo"
+				alt="BPTP NTB Logo"
 			/>
 		</div>
 	</div>

@@ -1,7 +1,9 @@
-<section class="container mx-auto mt-24 max-w-screen-2xl px-10 2xl:mt-32">
+<section
+	class="container mx-auto mt-20 max-w-screen-2xl px-10 xl:mt-24 2xl:mt-32"
+>
 	<h3 class="text-2xl font-semibold">Our Programs</h3>
 
-	<div class="mt-5 grid w-full grid-cols-3 gap-5">
+	<div class="mt-5 grid w-full grid-cols-2 gap-5 xl:grid-cols-3">
 		<a
 			href="/"
 			class="group relative flex flex-col items-start gap-5 border border-transparent bg-gray-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 2xl:flex-row"

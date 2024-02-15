@@ -86,7 +86,7 @@
 		</a>
 
 		<!-- Navigation -->
-		<div class="flex basis-1/3 items-center justify-center gap-1.5">
+		<div class="hidden basis-1/3 items-center justify-center gap-1.5 xl:flex">
 			<a href="/profile" class="p-2 text-sm font-medium hover:underline">
 				Profil
 			</a>
@@ -108,7 +108,8 @@
 						/>
 					</svg>
 				</Popover.Trigger>
-				<Popover.Content>
+
+				<Popover.Content class="mt-5">
 					<nav class="flex flex-col items-start">
 						<a
 							href="/program/language-test"

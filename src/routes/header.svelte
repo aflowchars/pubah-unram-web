@@ -17,16 +17,16 @@
 		<Carousel.Content class="w-full">
 			<Carousel.Item class="">
 				<figure
-					class="relative flex h-[calc(100vh_-_108px)] w-full items-center justify-center overflow-hidden"
+					class="relative flex h-[50vh] w-full items-center justify-center overflow-hidden xl:h-[calc(100vh_-_108px)]"
 				>
 					<div
 						class="absolute z-10 h-full w-full bg-gradient-to-t from-stone-950/60 to-stone-950/10"
 					></div>
 
 					<div
-						class="absolute z-20 flex h-full w-full flex-col items-start justify-end gap-2 p-10 pb-32 text-white"
+						class="absolute z-20 flex h-full w-full flex-col items-start justify-end gap-2 p-10 text-white xl:pb-32"
 					>
-						<div class="flex w-2/4 flex-col items-start">
+						<div class="flex w-full flex-col items-start xl:w-2/4">
 							<a
 								href="/program"
 								class="rounded-md bg-blue-950 px-2 py-1 text-xs font-semibold text-white"
@@ -34,12 +34,15 @@
 								Program
 							</a>
 
-							<h1 class="mt-2 text-3xl font-semibold">Halo teman semua ayo kita sambut</h1>
+							<h1 class="mt-2 text-3xl font-semibold">
+								Halo teman semua ayo kita sambut
+							</h1>
 
 							<p class="mt-3 text-sm text-stone-100">
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum tempora ab quia at
-								molestiae temporibus suscipit explicabo voluptas blanditiis mollitia earum alias
-								praesentium adipisci quaerat officia, sapiente cumque iure assumenda.
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+								Nostrum tempora ab quia at molestiae temporibus suscipit
+								explicabo voluptas blanditiis mollitia earum alias praesentium
+								adipisci quaerat officia, sapiente cumque iure assumenda.
 							</p>
 						</div>
 					</div>
@@ -54,16 +57,16 @@
 
 			<Carousel.Item class="">
 				<figure
-					class="relative flex h-[calc(100vh_-_108px)] w-full items-center justify-center overflow-hidden"
+					class="relative flex h-[50vh] w-full items-center justify-center overflow-hidden xl:h-[calc(100vh_-_108px)]"
 				>
 					<div
 						class="absolute z-10 h-full w-full bg-gradient-to-t from-stone-950/60 to-stone-950/10"
 					></div>
 
 					<div
-						class="absolute z-20 flex h-full w-full flex-col items-start justify-end gap-2 p-10 pb-32 text-white"
+						class="absolute z-20 flex h-full w-full flex-col items-start justify-end gap-2 p-10 text-white xl:pb-32"
 					>
-						<div class="flex w-2/4 flex-col items-start">
+						<div class="flex w-full flex-col items-start xl:w-2/4">
 							<a
 								href="/program"
 								class="rounded-md bg-blue-950 px-2 py-1 text-xs font-semibold text-white"
@@ -71,12 +74,15 @@
 								Program
 							</a>
 
-							<h1 class="mt-2 text-3xl font-semibold">Halo teman semua ayo kita sambut</h1>
+							<h1 class="mt-2 text-3xl font-semibold">
+								Halo teman semua ayo kita sambut
+							</h1>
 
 							<p class="mt-3 text-sm text-stone-100">
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum tempora ab quia at
-								molestiae temporibus suscipit explicabo voluptas blanditiis mollitia earum alias
-								praesentium adipisci quaerat officia, sapiente cumque iure assumenda.
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+								Nostrum tempora ab quia at molestiae temporibus suscipit
+								explicabo voluptas blanditiis mollitia earum alias praesentium
+								adipisci quaerat officia, sapiente cumque iure assumenda.
 							</p>
 						</div>
 					</div>
