@@ -64,6 +64,7 @@
 			</a>
 		</div>
 	</section>
+
 	<!-- Main bar -->
 	<section
 		class="flex items-center justify-between border-b border-gray-100 bg-gray-50 px-10 py-3"

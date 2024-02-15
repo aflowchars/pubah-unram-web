@@ -1,8 +1,8 @@
-<section class="container mx-auto mt-20 max-w-screen-2xl px-10">
+<section class="container mx-auto mb-40 mt-20 max-w-screen-2xl px-10">
 	<h3 class="text-2xl font-semibold">Berita Terbaru</h3>
 
-	<div class="mt-5 grid w-full grid-cols-5 gap-2.5">
-		{#each [1, 2, 3, 4, 5] as item}
+	<div class="mt-5 grid w-full grid-cols-4 gap-2.5">
+		{#each [1, 2, 3, 4, 5, 6, 7, 8] as item}
 			<a
 				href="/"
 				class="border border-transparent p-1 transition-all duration-300 ease-in-out hover:border-gray-950"
@@ -24,5 +24,13 @@
 				</div>
 			</a>
 		{/each}
+	</div>
+
+	<div class="mt-10 flex justify-center">
+		<button
+			class="relative z-10 border border-transparent bg-amber-300 px-6 py-3 text-sm font-semibold text-gray-950 transition-all duration-300 ease-in-out hover:border-gray-950"
+		>
+			Baca Lebih Banyak
+		</button>
 	</div>
 </section>

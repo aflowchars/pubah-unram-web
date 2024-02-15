@@ -1,4 +1,4 @@
-<section class="container mx-auto mt-20 max-w-screen-2xl px-10">
+<section class="container mx-auto mt-24 max-w-screen-2xl px-10 2xl:mt-32">
 	<h3 class="text-2xl font-semibold">Our Programs</h3>
 
 	<div class="mt-5 grid w-full grid-cols-3 gap-5">
@@ -125,7 +125,8 @@
 				<h5 class="text-lg font-semibold">Resource & Self-Access Centre</h5>
 
 				<p class="w-full text-sm leading-relaxed text-gray-600">
-					Support koleksi tape pengajaran dan sistem belajar mandiri bagi foreigners
+					Support koleksi tape pengajaran dan sistem belajar mandiri bagi
+					foreigners
 				</p>
 			</div>
 		</a>
@@ -206,7 +207,14 @@
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
 			>
-				<rect x="3.75003" y="24.3707" width="24.5" height="3.87931" rx="1.25" stroke-width="1.25" />
+				<rect
+					x="3.75003"
+					y="24.3707"
+					width="24.5"
+					height="3.87931"
+					rx="1.25"
+					stroke-width="1.25"
+				/>
 				<path
 					d="M5.16671 24.5172V12.8023C5.16671 12.3402 5.52598 11.9655 5.96918 11.9655H13.5926M26.8334 24.5172V14.0575"
 					stroke-width="1.25"
@@ -233,7 +241,8 @@
 				<h5 class="text-lg font-semibold">Course</h5>
 
 				<p class="w-full text-sm leading-relaxed text-gray-600">
-					Pelayanan kursus Bahasa Inggris dan Bahasa Mandarin dengan berbagai level dan tingkatan
+					Pelayanan kursus Bahasa Inggris dan Bahasa Mandarin dengan berbagai
+					level dan tingkatan
 				</p>
 			</div>
 		</a>

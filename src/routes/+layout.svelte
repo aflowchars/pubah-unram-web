@@ -5,7 +5,7 @@
 
 <Navbar />
 
-<main class="relative z-10 mb-28 mt-[108px]">
+<main class="relative z-10 mt-[108px]">
 	<slot />
 </main>
 
