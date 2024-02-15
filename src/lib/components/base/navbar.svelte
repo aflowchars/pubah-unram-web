@@ -1,6 +1,5 @@
 <script lang="ts">
-	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
-	import * as HoverCard from '$lib/components/ui/hover-card';
+	import * as Popover from '$lib/components/ui/popover';
 </script>
 
 <nav class="navbar fixed inset-0 z-50 h-20 w-full bg-gray-50">
@@ -91,8 +90,8 @@
 				Profil
 			</a>
 
-			<HoverCard.Root>
-				<HoverCard.Trigger
+			<Popover.Root>
+				<Popover.Trigger
 					class="flex items-center gap-1 p-2 text-sm font-medium hover:underline"
 				>
 					<span> Program </span>
@@ -107,9 +106,8 @@
 							d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z"
 						/>
 					</svg>
-				</HoverCard.Trigger>
-
-				<HoverCard.Content>
+				</Popover.Trigger>
+				<Popover.Content>
 					<nav class="flex flex-col items-start">
 						<a
 							href="/program/language-test"
@@ -140,8 +138,8 @@
 							Course
 						</a>
 					</nav>
-				</HoverCard.Content>
-			</HoverCard.Root>
+				</Popover.Content>
+			</Popover.Root>
 
 			<a href="/partnership" class="p-2 text-sm font-medium hover:underline">
 				Partnership

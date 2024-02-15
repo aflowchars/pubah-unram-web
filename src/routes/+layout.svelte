@@ -21,7 +21,7 @@
 				/>
 
 				<div
-					class="pointer-events-none flex flex-1 flex-col items-start gap-0.5 text-base font-semibold leading-none"
+					class="pointer-events-none flex flex-1 flex-col items-start gap-0.5 text-base font-semibold leading-none text-white"
 				>
 					<span>Pusat Bahasa</span>
 					<span>Universitas Mataram</span>
