@@ -1,3 +1,15 @@
+<script>
+	import { page } from '$app/stores';
+
+	const copyToClipboard = () => {
+		// Copy the text inside the text field
+		navigator.clipboard.writeText($page.url.href);
+
+		// Alert the copied text
+		alert('Copied the text: ' + $page.url.href);
+	};
+</script>
+
 <div class="min-h-screen">
 	<section
 		class="container mx-auto mb-16 mt-16 max-w-screen-2xl px-10 xl:mb-40 xl:mt-20"
@@ -19,7 +31,7 @@
 				<div
 					class="mx-auto flex h-full max-w-screen-lg flex-col items-center justify-between"
 				>
-					<div></div>
+					<div />
 
 					<div class="flex flex-col items-center gap-1">
 						<a
@@ -53,6 +65,7 @@
 						</section>
 
 						<button
+							on:click={copyToClipboard}
 							class="relative flex items-center gap-1 rounded-md border border-blue-950 bg-gray-100 px-4 py-2.5 text-blue-950 shadow-md"
 						>
 							<svg
