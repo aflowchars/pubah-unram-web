@@ -4,7 +4,7 @@
 
 <SeoHead title="Tes Kemampuan Bahasa Asing" />
 
-<div class="px-10">
+<div class="container mx-auto max-w-screen-2xl px-10">
 	<header class="relative h-[50vh] overflow-hidden">
 		<img
 			class="absolute inset-0 -z-10 h-full w-full object-cover object-center"
@@ -19,22 +19,26 @@
 		<div
 			class="relative z-10 flex h-full w-full flex-col justify-end p-10 text-white"
 		>
-			<nav class="w-3/4 space-y-2.5 text-left">
+			<nav class="flex w-3/4 flex-col items-start space-y-2.5 text-left">
 				<h1 class="text-4xl font-medium tracking-tighter">
 					Tes Kemampuan Bahasa Asing
 				</h1>
 
 				<p class="w-7/12 text-base leading-relaxed text-gray-300">
-					Tes Kemampuan Bahasa Asing adalah tes yang dilakukan oleh mahasiswa
-					Unram untuk mengetahui kemampuan bahasa Inggris mahasiswa.
+					Tes Kemampuan Bahasa Asing adalah tes yang dilakukan oleh Unram untuk
+					mengetahui kemampuan bahasa asing.
 				</p>
 			</nav>
 		</div>
 	</header>
+</div>
 
-	<section
-		class="mx-auto mt-10 max-w-screen-lg px-10 text-justify text-lg leading-loose text-gray-600"
-	>
+<section
+	class="mx-auto mt-20 max-w-screen-lg space-y-10 px-10 text-justify text-lg leading-loose text-gray-600"
+>
+	<section class="space-y-2.5">
+		<h3 class="text-2xl font-semibold text-gray-950">Tentang Tes Kemampuan</h3>
+
 		<p>
 			Layanan bahasa asing di UPA Bahasa Universitas Mataram menyelenggarakan
 			Tes TOEFL Prediksi dan Tes TOEFL Standar untuk mengukur kemampuan
@@ -52,9 +56,103 @@
 			bahan studi yang berguna dan strategi efektif dalam menghadapi tes ini.
 		</p>
 	</section>
-</div>
 
-<nav class="mt-10 flex items-center justify-between bg-blue-50 px-32 py-5">
+	<section class="mt-5 space-y-5">
+		<h4 class="text-xl font-semibold text-gray-950">
+			1. Program Tes Kemampuan Bahasa Inggris
+		</h4>
+
+		<div class="relative">
+			<img
+				class="h-[32rem] w-full object-cover object-bottom"
+				src="https://images.unsplash.com/photo-1565022536102-f7645c84354a?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+				alt="English Grammar"
+			/>
+
+			<div class="mt-2.5 flex items-center gap-2.5">
+				<div class="h-4 w-1 rounded-full bg-gray-700"></div>
+				<p class="text-sm font-medium">Program Tes Kemampuan Bahasa Inggris</p>
+			</div>
+		</div>
+
+		<p>
+			Program bahasa Inggris bertujuan untuk membantu peserta mengembangkan
+			kemampuan berbahasa Inggris secara menyeluruh, termasuk keterampilan
+			berbicara, mendengarkan, membaca, menulis, serta memahami tata bahasa dan
+			kosakata. Kurikulum program ini dirancang secara terstruktur, dengan
+			materi yang disesuaikan dengan tingkat keahlian peserta, mulai dari
+			tingkat dasar hingga tingkat lanjutan, mencakup topik seperti tata bahasa,
+			kosakata, percakapan sehari-hari, sastra, dan kebudayaan bahasa Inggris.
+			Metode pengajaran yang digunakan bervariasi, mulai dari pengajaran
+			langsung, diskusi kelompok, latihan interaktif, hingga penggunaan
+			teknologi seperti perangkat lunak pembelajaran bahasa Inggris dan
+			multimedia. Program ini juga melibatkan penilaian yang berkaitan dengan
+			kemajuan peserta dalam memahami dan menggunakan bahasa Inggris, termasuk
+			ujian tertulis, presentasi lisan, proyek, dan penugasan tertulis lainnya.
+			Selain itu, program bahasa Inggris didukung oleh fasilitas dan sumber daya
+			yang memadai, seperti perpustakaan dengan koleksi buku dan materi ajar,
+			laboratorium bahasa, dan akses ke sumber daya daring untuk belajar
+			mandiri. Tujuan akhir dari program ini adalah untuk memberikan peserta
+			kemampuan bahasa Inggris yang berguna dalam mencapai tujuan karir dan
+			akademik mereka, baik itu untuk bekerja di lingkungan yang menggunakan
+			bahasa Inggris, melanjutkan studi di luar negeri, atau menghadapi tes
+			kemampuan bahasa Inggris seperti TOEFL atau IELTS.
+		</p>
+	</section>
+
+	<section class="mt-5 space-y-5">
+		<h4 class="text-xl font-semibold text-gray-950">
+			2. Program Tes Kemampuan Bahasa Mandarin
+		</h4>
+
+		<div class="relative">
+			<img
+				class="h-[32rem] w-full object-cover object-bottom"
+				src="https://images.unsplash.com/photo-1523386574057-d43e1708e02e?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+				alt="Mandarin"
+			/>
+
+			<div class="mt-2.5 flex items-center gap-2.5">
+				<div class="h-4 w-1 rounded-full bg-gray-700"></div>
+				<p class="text-sm font-medium">Program Tes Kemampuan Bahasa Mandarin</p>
+			</div>
+		</div>
+
+		<p>
+			Program bahasa Mandarin adalah program pendidikan yang bertujuan untuk
+			mengajarkan peserta tentang bahasa dan budaya Tiongkok. Program ini
+			dirancang untuk membantu peserta memperoleh keterampilan dalam
+			mendengarkan, berbicara, membaca, dan menulis bahasa Mandarin, serta
+			memahami aspek-aspek budaya Tiongkok. Kurikulum program bahasa Mandarin
+			biasanya disusun berdasarkan tingkat kemampuan peserta, mulai dari tingkat
+			pemula hingga tingkat lanjutan. Materi pembelajaran mencakup pengucapan
+			kata, tata bahasa, kosakata, dan frasa-frasa umum yang digunakan dalam
+			percakapan sehari-hari. Selain itu, peserta juga akan belajar tentang
+			karakter Hanzi (huruf Tiongkok), yang merupakan bagian penting dari bahasa
+			Mandarin. Metode pengajaran dalam program ini dapat bervariasi, termasuk
+			pengajaran langsung, permainan bahasa, aktivitas berbasis kelompok, dan
+			penggunaan teknologi seperti aplikasi pembelajaran bahasa Mandarin.
+			Program ini juga sering mengintegrasikan aspek budaya Tiongkok, seperti
+			festival tradisional, seni, musik, dan adat istiadat Tiongkok, untuk
+			memberikan pemahaman yang lebih mendalam tentang budaya Tiongkok kepada
+			peserta. Penilaian dalam program bahasa Mandarin dapat dilakukan melalui
+			ujian tertulis, presentasi lisan, penugasan proyek, dan aktivitas praktik
+			dalam kehidupan sehari-hari. Peserta diberi kesempatan untuk menggunakan
+			bahasa Mandarin dalam situasi nyata untuk meningkatkan keterampilan
+			komunikasi mereka. Program bahasa Mandarin juga dapat memberikan manfaat
+			yang luas bagi peserta, termasuk peluang karir yang lebih baik di pasar
+			global yang semakin terintegrasi, kemungkinan untuk studi lanjut di
+			Tiongkok, atau memahami lebih dalam tentang budaya dan tradisi Tiongkok.
+			Dengan demikian, program bahasa Mandarin bertujuan untuk memberikan
+			peserta kemampuan bahasa dan pemahaman budaya yang memadai untuk
+			berinteraksi dan bekerja dalam lingkungan yang menggunakan bahasa
+			Mandarin, serta untuk mengapresiasi dan memahami budaya Tiongkok dengan
+			lebih baik.
+		</p>
+	</section>
+</section>
+
+<nav class="mt-20 flex items-center justify-between bg-blue-50 px-32 py-5">
 	<a href="/programs/course" class="flex flex-col items-start">
 		<h6 class="text-xs font-semibold text-gray-500">Sebelumnya</h6>
 

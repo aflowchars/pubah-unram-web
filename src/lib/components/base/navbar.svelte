@@ -112,31 +112,31 @@
 				<Popover.Content class="mt-5">
 					<nav class="flex flex-col items-start">
 						<a
-							href="/program/language-test"
+							href="/programs/language-test"
 							class="py-2 text-sm hover:underline"
 						>
 							Language Test
 						</a>
 
 						<a
-							href="/program/translation-&-Interpreting"
+							href="/programs/translation-&-interpreting"
 							class="py-2 text-sm hover:underline"
 						>
 							Translation & Interpreting
 						</a>
 
 						<a
-							href="/program/resource-&-self-access-centre"
+							href="/programs/resource-centre-&-self-access-centre"
 							class="py-2 text-sm hover:underline"
 						>
-							Resource & Self-Access Centre
+							Resource Centre & Self-Access Centre
 						</a>
 
-						<a href="/program/bipa" class="py-2 text-sm hover:underline">
+						<a href="/programs/bipa" class="py-2 text-sm hover:underline">
 							BIPA
 						</a>
 
-						<a href="/program/e-pay" class="py-2 text-sm hover:underline">
+						<a href="/programs/e-pay" class="py-2 text-sm hover:underline">
 							Course
 						</a>
 					</nav>
@@ -171,6 +171,31 @@
 					placeholder="Pencarian"
 				/>
 			</div>
+
+			<button class="flex items-center gap-2">
+				<span class="text-sm font-semibold"> ID </span>
+
+				<div
+					class="relative h-6 w-6 overflow-hidden rounded-full border border-gray-300"
+				>
+					<img
+						class="h-full w-full object-cover"
+						src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Flag_of_Indonesia.png/800px-Flag_of_Indonesia.png"
+						alt="Indonesia Flag"
+					/>
+				</div>
+
+				<svg
+					class="h-4 w-4"
+					fill="currentColor"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 256 256"
+				>
+					<path
+						d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+					/>
+				</svg>
+			</button>
 		</div>
 	</section>
 </nav>
