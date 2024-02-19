@@ -1,8 +1,10 @@
 <div class="min-h-screen">
 	<div
-		class="container mx-auto flex min-h-screen max-w-screen-2xl flex-col items-center gap-5 px-10 py-10"
+		class="container mx-auto flex min-h-screen max-w-screen-2xl flex-col items-center px-10 py-10 md:gap-2.5 xl:gap-5"
 	>
-		<div class="grid h-[32rem] grid-cols-12 gap-5 overflow-hidden">
+		<div
+			class="grid grid-cols-12 overflow-hidden md:h-[16rem] md:gap-2.5 xl:h-[32rem] xl:gap-5"
+		>
 			<div class="col-span-5 h-full w-full">
 				<picture>
 					<img
@@ -13,7 +15,9 @@
 				</picture>
 			</div>
 
-			<div class="col-span-7 grid h-auto w-full grid-cols-2 gap-5">
+			<div
+				class="col-span-7 grid h-auto w-full grid-cols-2 md:gap-2.5 xl:gap-5"
+			>
 				<picture>
 					<img
 						class="h-full w-full object-cover"
@@ -48,8 +52,12 @@
 			</div>
 		</div>
 
-		<div class="grid h-[32rem] grid-cols-12 gap-5 overflow-hidden">
-			<div class="col-span-7 grid h-auto w-full grid-cols-2 gap-5">
+		<div
+			class="grid grid-cols-12 overflow-hidden md:h-[16rem] md:gap-2.5 xl:h-[32rem] xl:gap-5"
+		>
+			<div
+				class="col-span-7 grid h-auto w-full grid-cols-2 md:gap-2.5 xl:gap-5"
+			>
 				<picture>
 					<img
 						class="h-full w-full object-cover"

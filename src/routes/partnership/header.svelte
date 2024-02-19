@@ -10,7 +10,7 @@
 		}}
 		plugins={[
 			Autoplay({
-				delay: 5000
+				delay: 7500
 			})
 		]}
 	>
@@ -28,12 +28,12 @@
 					>
 						<div class="flex w-full flex-col items-start xl:w-2/4">
 							<div
-								class="relative rounded-lg bg-amber-400 px-3 py-1.5 text-sm font-semibold text-gray-950"
+								class="relative rounded-lg bg-amber-400 px-2.5 py-1 text-xs font-semibold text-gray-950"
 							>
 								Bekerjasama Dengan
 							</div>
 
-							<h1 class="mt-4 text-5xl font-semibold">BAPPEDA NTB</h1>
+							<h1 class="mt-4 text-3xl font-semibold">BAPPEDA NTB</h1>
 						</div>
 					</div>
 
@@ -58,12 +58,12 @@
 					>
 						<div class="flex w-full flex-col items-start xl:w-2/4">
 							<div
-								class="relative rounded-lg bg-amber-400 px-3 py-1.5 text-sm font-semibold text-gray-950"
+								class="relative rounded-lg bg-amber-400 px-2.5 py-1 text-xs font-semibold text-gray-950"
 							>
 								Bekerjasama Dengan
 							</div>
 
-							<h1 class="mt-4 text-5xl font-semibold">SMPN 2 Mataram</h1>
+							<h1 class="mt-4 text-3xl font-semibold">SMPN 2 Mataram</h1>
 						</div>
 					</div>
 

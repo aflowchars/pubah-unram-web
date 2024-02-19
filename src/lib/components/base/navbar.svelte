@@ -53,6 +53,9 @@
 			</a>
 
 			<a href="/myUnram" class="px-2 text-xs font-semibold tracking-tight">
+				SiReg
+			</a>
+			<a href="/myUnram" class="px-2 text-xs font-semibold tracking-tight">
 				TOEFL
 			</a>
 
@@ -71,20 +74,22 @@
 		class="flex items-center justify-between border-b border-gray-200/50 bg-gray-50 px-10 py-3"
 	>
 		<!-- Logo -->
-		<a href="/" class="flex basis-1/3 items-center justify-start gap-2">
-			<img
-				class="h-12 w-12"
-				src="/assets/general/unram-logo.png"
-				alt="Unram Logo"
-			/>
+		<div class="basis-1/3">
+			<a href="/" class="flex w-fit items-center justify-start gap-2">
+				<img
+					class="h-12 w-12"
+					src="/assets/general/unram-logo.png"
+					alt="Unram Logo"
+				/>
 
-			<div
-				class="pointer-events-none flex flex-1 flex-col items-start gap-0.5 text-sm font-semibold leading-none"
-			>
-				<span>Pusat Bahasa</span>
-				<span>Universitas Mataram</span>
-			</div>
-		</a>
+				<div
+					class="pointer-events-none flex flex-1 flex-col items-start gap-0.5 text-sm font-semibold leading-none"
+				>
+					<span>Pusat Bahasa</span>
+					<span>Universitas Mataram</span>
+				</div>
+			</a>
+		</div>
 
 		<!-- Navigation -->
 		<div class="hidden basis-1/3 items-center justify-center gap-1.5 xl:flex">
