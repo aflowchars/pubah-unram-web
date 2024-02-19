@@ -67,7 +67,7 @@
 
 	<!-- Main bar -->
 	<section
-		class="flex items-center justify-between border-b border-gray-100 bg-gray-50 px-10 py-3"
+		class="flex items-center justify-between border-b border-gray-200/50 bg-gray-50 px-10 py-3"
 	>
 		<!-- Logo -->
 		<a href="/" class="flex basis-1/3 items-center justify-start gap-2">
@@ -113,30 +113,36 @@
 					<nav class="flex flex-col items-start">
 						<a
 							href="/programs/language-test"
-							class="py-2 text-sm hover:underline"
+							class="py-2 text-sm font-medium text-gray-700 hover:underline"
 						>
 							Language Test
 						</a>
 
 						<a
 							href="/programs/translation-&-interpreting"
-							class="py-2 text-sm hover:underline"
+							class="py-2 text-sm font-medium text-gray-700 hover:underline"
 						>
 							Translation & Interpreting
 						</a>
 
 						<a
 							href="/programs/resource-centre-&-self-access-centre"
-							class="py-2 text-sm hover:underline"
+							class="py-2 text-sm font-medium text-gray-700 hover:underline"
 						>
 							Resource Centre & Self-Access Centre
 						</a>
 
-						<a href="/programs/bipa" class="py-2 text-sm hover:underline">
+						<a
+							href="/programs/bipa"
+							class="py-2 text-sm font-medium text-gray-700 hover:underline"
+						>
 							BIPA
 						</a>
 
-						<a href="/programs/e-pay" class="py-2 text-sm hover:underline">
+						<a
+							href="/programs/e-pay"
+							class="py-2 text-sm font-medium text-gray-700 hover:underline"
+						>
 							Course
 						</a>
 					</nav>
