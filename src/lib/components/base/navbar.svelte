@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import * as Popover from '$lib/components/ui/popover';
 </script>
 
@@ -95,10 +96,20 @@
 				<Popover.Trigger
 					class="flex items-center gap-1 p-2 text-sm font-medium hover:underline"
 				>
-					<span> Program </span>
+					<span
+						class={$page.url.href.includes('/programs')
+							? 'font-semibold text-blue-800'
+							: 'font-medium'}
+					>
+						Program
+					</span>
 
 					<svg
-						class="pointer-events-none h-3 w-3 text-gray-950"
+						class="pointer-events-none h-3 w-3 {$page.url.href.includes(
+							'/programs'
+						)
+							? 'font-semibold text-blue-800'
+							: 'font-normal text-gray-950'}"
 						fill="currentColor"
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 256 256"
@@ -113,35 +124,55 @@
 					<nav class="flex flex-col items-start">
 						<a
 							href="/programs/language-test"
-							class="py-2 text-sm font-medium text-gray-700 hover:underline"
+							class="py-2 text-sm hover:underline {$page.url.href.includes(
+								'/language-test'
+							)
+								? 'font-semibold text-blue-800'
+								: 'font-medium'}"
 						>
 							Language Test
 						</a>
 
 						<a
 							href="/programs/translation-&-interpreting"
-							class="py-2 text-sm font-medium text-gray-700 hover:underline"
+							class="py-2 text-sm hover:underline {$page.url.href.includes(
+								'/translation-&-interpreting'
+							)
+								? 'font-semibold text-blue-800'
+								: 'font-medium'}"
 						>
 							Translation & Interpreting
 						</a>
 
 						<a
 							href="/programs/resource-centre-&-self-access-centre"
-							class="py-2 text-sm font-medium text-gray-700 hover:underline"
+							class="py-2 text-sm hover:underline {$page.url.href.includes(
+								'/resource-centre-&-self-access-centre'
+							)
+								? 'font-semibold text-blue-800'
+								: 'font-medium'}"
 						>
 							Resource Centre & Self-Access Centre
 						</a>
 
 						<a
 							href="/programs/bipa"
-							class="py-2 text-sm font-medium text-gray-700 hover:underline"
+							class="py-2 text-sm hover:underline {$page.url.href.includes(
+								'/bipa'
+							)
+								? 'font-semibold text-blue-800'
+								: 'font-medium'}"
 						>
 							BIPA
 						</a>
 
 						<a
-							href="/programs/e-pay"
-							class="py-2 text-sm font-medium text-gray-700 hover:underline"
+							href="/programs/course"
+							class="py-2 text-sm hover:underline {$page.url.href.includes(
+								'/course'
+							)
+								? 'font-semibold text-blue-800'
+								: 'font-medium'}"
 						>
 							Course
 						</a>
@@ -149,11 +180,25 @@
 				</Popover.Content>
 			</Popover.Root>
 
-			<a href="/partnership" class="p-2 text-sm font-medium hover:underline">
+			<a
+				href="/partnership"
+				class="p-2 text-sm hover:underline {$page.url.href.includes(
+					'/partnership'
+				)
+					? 'font-semibold text-blue-800'
+					: 'font-medium'}"
+			>
 				Partnership
 			</a>
 
-			<a href="/galeri" class="p-2 text-sm font-medium hover:underline">
+			<a
+				href="/gallery"
+				class="p-2 text-sm font-medium hover:underline {$page.url.href.includes(
+					'/gallery'
+				)
+					? 'font-semibold text-blue-800'
+					: 'font-medium'}"
+			>
 				Galeri
 			</a>
 		</div>
