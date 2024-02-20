@@ -5,7 +5,7 @@
 
 	<div class="mt-5 grid w-full grid-cols-2 gap-5 xl:grid-cols-3">
 		<a
-			href="/"
+			href="/programs/language-test"
 			class="group relative flex flex-col items-start gap-5 border border-transparent bg-gray-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 2xl:flex-row"
 		>
 			<svg
@@ -50,7 +50,7 @@
 		</a>
 
 		<a
-			href="/"
+			href="/programs/translation-&-interpreting"
 			class="group relative flex flex-col items-start gap-5 border border-transparent bg-gray-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 2xl:flex-row"
 		>
 			<svg
@@ -91,7 +91,7 @@
 		</a>
 
 		<a
-			href="/"
+			href="/programs/resource-centre-&-self-access-centre"
 			class="group relative flex flex-col items-start gap-5 border border-transparent bg-gray-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 2xl:flex-row"
 		>
 			<svg
@@ -134,7 +134,7 @@
 		</a>
 
 		<a
-			href="/"
+			href="/programs/bipa"
 			class="group relative flex flex-col items-start gap-5 border border-transparent bg-gray-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 2xl:flex-row"
 		>
 			<svg
@@ -188,7 +188,7 @@
 		</a>
 
 		<a
-			href="/"
+			href="/programs/course"
 			class="group relative flex flex-col items-start gap-5 border border-transparent bg-gray-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 2xl:flex-row"
 		>
 			<svg

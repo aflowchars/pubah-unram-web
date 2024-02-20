@@ -26,7 +26,7 @@
 	<section
 		class="container mx-auto mb-16 mt-16 max-w-screen-2xl px-10 xl:mb-20 xl:mt-20"
 	>
-		<div class="relative h-[75vh] w-full overflow-hidden">
+		<div class="relative w-full overflow-hidden md:h-[40vh] xl:h-[75vh]">
 			<div
 				class="absolute z-10 h-full w-full bg-gradient-to-t from-gray-950/80 to-gray-950/15"
 			/>
@@ -54,14 +54,16 @@
 						</a>
 
 						<h1
-							class="mt-1.5 text-center text-4xl font-semibold leading-normal text-white"
+							class="mt-1.5 text-center text-3xl font-semibold leading-normal text-white xl:text-4xl"
 						>
 							Luluskan 249 Mahasiswa, Dekan Berpesan, Nasib Baik berawal dari
 							Ikhtiar
 						</h1>
 					</div>
 
-					<div class="flex w-full items-center justify-between">
+					<div
+						class="flex w-full items-center justify-between md:px-10 xl:px-0"
+					>
 						<section class="flex items-center justify-center gap-2.5">
 							<div class="relative h-12 w-12 overflow-hidden rounded-full">
 								<img
@@ -117,10 +119,10 @@
 			</div>
 		</div>
 
-		<div class="mx-auto mt-10 flex max-w-screen-lg flex-col items-center">
-			<div
-				class="mt-5 space-y-5 text-justify text-lg leading-loose text-gray-600"
-			>
+		<div
+			class="mx-auto flex max-w-screen-lg flex-col items-center md:mt-5 xl:mt-10"
+		>
+			<div class="space-y-5 text-justify text-lg leading-loose text-gray-600">
 				<p>
 					<strong>Mataram, 3 Februari 2024 –</strong> FKIP Unram luluskan 249 mahasiswa
 					pada yudisium perdana di tahun 2024 pada Jumat (2/2/2024). Yudisium ini
@@ -237,7 +239,7 @@
 			</div>
 		</div>
 
-		<section class="mt-20 border-t border-gray-200 pt-10">
+		<section class="border-t border-gray-200 pt-10 md:mt-12 xl:mt-20">
 			<h3 class="text-2xl font-semibold">Berita Lainnya</h3>
 
 			<div class="mt-5 grid w-full grid-cols-2 gap-5 xl:grid-cols-4 xl:gap-2.5">

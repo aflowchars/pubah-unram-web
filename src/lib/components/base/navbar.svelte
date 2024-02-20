@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import * as Popover from '$lib/components/ui/popover';
+	import * as Menubar from '$lib/components/ui/menubar';
 </script>
 
 <nav class="navbar fixed inset-0 z-50 h-20 w-full bg-gray-50">
@@ -93,104 +93,115 @@
 
 		<!-- Navigation -->
 		<div class="hidden basis-1/3 items-center justify-center gap-1.5 xl:flex">
-			<a href="/profile" class="p-2 text-sm font-medium hover:underline">
+			<a
+				href="/profile"
+				class="px-3 py-1.5 text-sm font-medium hover:underline focus:bg-accent focus:text-accent-foreground"
+			>
 				Profil
 			</a>
 
-			<Popover.Root>
-				<Popover.Trigger
-					class="flex items-center gap-1 p-2 text-sm font-medium hover:underline"
-				>
-					<span
-						class={$page.url.href.includes('/programs')
-							? 'font-semibold text-blue-800'
-							: 'font-medium'}
+			<Menubar.Root>
+				<Menubar.Menu>
+					<Menubar.Trigger
+						class="flex cursor-pointer items-center gap-1 border-none bg-gray-50 px-3 py-1.5 text-sm font-medium shadow-none hover:underline"
 					>
-						Program
-					</span>
+						<span
+							class={$page.url.href.includes('/programs')
+								? 'rounded-sm bg-accent font-semibold text-blue-800'
+								: 'font-medium'}
+						>
+							Program
+						</span>
 
-					<svg
-						class="pointer-events-none h-3 w-3 {$page.url.href.includes(
-							'/programs'
-						)
-							? 'font-semibold text-blue-800'
-							: 'font-normal text-gray-950'}"
-						fill="currentColor"
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 256 256"
-					>
-						<path
-							d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z"
-						/>
-					</svg>
-				</Popover.Trigger>
+						<svg
+							class="pointer-events-none h-3 w-3 {$page.url.href.includes(
+								'/programs'
+							)
+								? 'rounded-sm bg-accent font-semibold text-blue-800'
+								: 'font-normal text-gray-950'}"
+							fill="currentColor"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 256 256"
+						>
+							<path
+								d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z"
+							/>
+						</svg>
+					</Menubar.Trigger>
 
-				<Popover.Content class="mt-5">
-					<nav class="flex flex-col items-start">
-						<a
+					<Menubar.Content class="mt-5">
+						<Menubar.Item
 							href="/programs/language-test"
-							class="py-2 text-sm hover:underline {$page.url.href.includes(
+							class="cursor-pointer py-2 text-sm {$page.url.href.includes(
 								'/language-test'
 							)
-								? 'font-semibold text-blue-800'
+								? 'rounded-sm bg-accent font-semibold text-blue-800'
 								: 'font-medium'}"
 						>
 							Language Test
-						</a>
+						</Menubar.Item>
 
-						<a
+						<Menubar.Separator />
+
+						<Menubar.Item
 							href="/programs/translation-&-interpreting"
-							class="py-2 text-sm hover:underline {$page.url.href.includes(
+							class="cursor-pointer py-2 text-sm {$page.url.href.includes(
 								'/translation-&-interpreting'
 							)
-								? 'font-semibold text-blue-800'
+								? 'rounded-sm bg-accent font-semibold text-blue-800'
 								: 'font-medium'}"
 						>
 							Translation & Interpreting
-						</a>
+						</Menubar.Item>
 
-						<a
+						<Menubar.Separator />
+
+						<Menubar.Item
 							href="/programs/resource-centre-&-self-access-centre"
-							class="py-2 text-sm hover:underline {$page.url.href.includes(
+							class="cursor-pointer py-2 text-sm {$page.url.href.includes(
 								'/resource-centre-&-self-access-centre'
 							)
-								? 'font-semibold text-blue-800'
+								? 'rounded-sm bg-accent font-semibold text-blue-800'
 								: 'font-medium'}"
 						>
 							Resource Centre & Self-Access Centre
-						</a>
+						</Menubar.Item>
 
-						<a
+						<Menubar.Separator />
+
+						<Menubar.Item
 							href="/programs/bipa"
-							class="py-2 text-sm hover:underline {$page.url.href.includes(
+							class="cursor-pointer py-2 text-sm {$page.url.href.includes(
 								'/bipa'
 							)
-								? 'font-semibold text-blue-800'
+								? 'rounded-sm bg-accent font-semibold text-blue-800'
 								: 'font-medium'}"
 						>
 							BIPA
-						</a>
+						</Menubar.Item>
 
-						<a
+						<Menubar.Separator />
+
+						<Menubar.Item
 							href="/programs/course"
-							class="py-2 text-sm hover:underline {$page.url.href.includes(
+							class="cursor-pointer py-2 text-sm {$page.url.href.includes(
 								'/course'
 							)
-								? 'font-semibold text-blue-800'
+								? 'rounded-sm bg-accent font-semibold text-blue-800'
 								: 'font-medium'}"
 						>
 							Course
-						</a>
-					</nav>
-				</Popover.Content>
-			</Popover.Root>
+						</Menubar.Item>
+					</Menubar.Content>
+				</Menubar.Menu>
+			</Menubar.Root>
 
 			<a
 				href="/partnership"
-				class="p-2 text-sm hover:underline {$page.url.href.includes(
+				class="px-3 py-1.5 text-sm hover:underline focus:bg-accent focus:text-accent-foreground {$page.url.href.includes(
 					'/partnership'
 				)
-					? 'font-semibold text-blue-800'
+					? 'rounded-sm bg-accent font-semibold text-blue-800'
 					: 'font-medium'}"
 			>
 				Partnership
@@ -198,10 +209,10 @@
 
 			<a
 				href="/gallery"
-				class="p-2 text-sm font-medium hover:underline {$page.url.href.includes(
+				class="px-3 py-1.5 text-sm font-medium hover:underline focus:bg-accent focus:text-accent-foreground {$page.url.href.includes(
 					'/gallery'
 				)
-					? 'font-semibold text-blue-800'
+					? 'rounded-sm bg-accent font-semibold text-blue-800'
 					: 'font-medium'}"
 			>
 				Galeri
