@@ -21,7 +21,7 @@
 				>
 					<div
 						class="absolute z-10 h-full w-full bg-gradient-to-t from-stone-950/60 to-stone-950/10"
-					></div>
+					/>
 
 					<div
 						class="absolute z-20 flex h-full w-full flex-col items-start justify-end gap-2 p-10 text-white xl:pb-32"
@@ -48,7 +48,7 @@
 					</div>
 
 					<img
-						class="relative z-0 h-full w-full scale-125 object-cover object-top"
+						class="relative z-0 h-full w-full object-cover object-top"
 						src="/assets/home/hero-1.jpg"
 						alt="unsplash1"
 					/>
