@@ -1,9 +1,14 @@
-<section class="container mx-auto mt-16 max-w-screen-2xl px-10 xl:mt-20">
-	<h3 class="text-2xl font-semibold">Partner Kami</h3>
+<section
+	class="container mx-auto mt-8 max-w-screen-2xl px-5 md:mt-16 md:px-10 xl:mt-20"
+>
+	<h3 class="text-xl font-semibold md:text-2xl">Partner Kami</h3>
 
-	<div class="mt-8 flex items-center justify-between xl:mt-10">
+	<div
+		id="partner__kami--logo"
+		class="mt-8 flex flex-row flex-nowrap items-center justify-between gap-5 overflow-x-auto xl:mt-10"
+	>
 		<div
-			class="relative h-16 w-20 transition-all duration-300 ease-in-out xl:h-20 2xl:h-28 2xl:w-28"
+			class="relative h-16 w-20 flex-shrink-0 transition-all duration-300 ease-in-out xl:h-20 2xl:h-28 2xl:w-28"
 		>
 			<img
 				class="h-full w-full object-contain"
@@ -13,7 +18,7 @@
 		</div>
 
 		<div
-			class="relative h-16 w-20 transition-all duration-300 ease-in-out xl:h-20 2xl:h-28 2xl:w-28"
+			class="relative h-16 w-20 flex-shrink-0 transition-all duration-300 ease-in-out xl:h-20 2xl:h-28 2xl:w-28"
 		>
 			<img
 				class="h-full w-full object-contain"
@@ -23,7 +28,7 @@
 		</div>
 
 		<div
-			class="relative h-16 w-20 transition-all duration-300 ease-in-out xl:h-20 2xl:h-28 2xl:w-28"
+			class="relative h-16 w-20 flex-shrink-0 transition-all duration-300 ease-in-out xl:h-20 2xl:h-28 2xl:w-28"
 		>
 			<img
 				class="h-full w-full object-contain"
@@ -33,7 +38,7 @@
 		</div>
 
 		<div
-			class="relative h-16 w-20 transition-all duration-300 ease-in-out xl:h-20 2xl:h-28 2xl:w-28"
+			class="relative h-16 w-20 flex-shrink-0 transition-all duration-300 ease-in-out xl:h-20 2xl:h-28 2xl:w-28"
 		>
 			<img
 				class="h-full w-full object-contain"
@@ -43,7 +48,7 @@
 		</div>
 
 		<div
-			class="relative h-16 w-20 transition-all duration-300 ease-in-out xl:h-20 2xl:h-28 2xl:w-28"
+			class="relative h-16 w-20 flex-shrink-0 transition-all duration-300 ease-in-out xl:h-20 2xl:h-28 2xl:w-28"
 		>
 			<img
 				class="h-full w-full object-contain"
@@ -53,7 +58,7 @@
 		</div>
 
 		<div
-			class="relative h-16 w-20 transition-all duration-300 ease-in-out xl:h-20 2xl:h-28 2xl:w-28"
+			class="relative h-16 w-20 flex-shrink-0 transition-all duration-300 ease-in-out xl:h-20 2xl:h-28 2xl:w-28"
 		>
 			<img
 				class="h-full w-full object-contain"
@@ -63,7 +68,7 @@
 		</div>
 
 		<div
-			class="relative h-16 w-20 transition-all duration-300 ease-in-out xl:h-20 2xl:h-28 2xl:w-28"
+			class="relative h-16 w-20 flex-shrink-0 transition-all duration-300 ease-in-out xl:h-20 2xl:h-28 2xl:w-28"
 		>
 			<img
 				class="h-full w-full object-contain"
@@ -73,3 +78,16 @@
 		</div>
 	</div>
 </section>
+
+<style>
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	#partner__kami--logo::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Hide scrollbar for IE, Edge and Firefox */
+	#partner__kami--logo {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+</style>

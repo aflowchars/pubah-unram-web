@@ -7,7 +7,7 @@
 	console.log(header);
 </script>
 
-<header class="relative w-full px-10">
+<header class="relative w-full px-0 md:px-10">
 	<Carousel.Root
 		opts={{
 			loop: true
@@ -21,26 +21,26 @@
 		<Carousel.Content class="w-full">
 			{#each header as slider}
 				<Carousel.Item
-					class="relative flex h-[50vh] w-full items-center justify-center overflow-hidden md:h-[60vh] lg:h-[75vh] xl:h-[calc(100vh_-_108px)]"
+					class="relative flex h-[75vh] w-full items-center justify-center overflow-hidden md:h-[60vh] lg:h-[75vh] xl:h-[calc(100vh_-_108px)]"
 				>
 					<div
 						class="absolute z-10 h-full w-full bg-gradient-to-t from-stone-950/95 to-stone-950/10"
 					/>
 
 					<div
-						class="absolute z-20 flex h-full w-full flex-col items-start justify-end p-10 text-white lg:pb-16 xl:pb-24"
+						class="absolute z-20 flex h-full w-full flex-col items-start justify-end p-5 pb-8 text-white md:p-10 lg:pb-16 xl:pb-24"
 					>
 						<section class="flex flex-col items-start">
-							<p class="text-sm font-semibold underline">#Program</p>
+							<p class="text-xs font-semibold underline md:text-sm">#Program</p>
 
 							<h1
-								class="mt-2.5 text-2xl font-semibold md:w-10/12 lg:w-full xl:text-3xl"
+								class="mt-2.5 line-clamp-2 text-lg font-semibold md:w-10/12 md:text-2xl lg:w-full xl:text-3xl"
 							>
 								{slider?.title || 'Ini Judul'}
 							</h1>
 
 							<p
-								class="mt-1 line-clamp-2 break-words text-sm leading-relaxed text-gray-300 md:w-10/12 lg:w-9/12 xl:mt-3 xl:w-3/4 xl:text-base"
+								class="mt-1 line-clamp-2 break-words text-sm leading-normal text-gray-300 md:w-10/12 md:leading-relaxed lg:w-9/12 xl:mt-3 xl:w-3/4 xl:text-base"
 							>
 								{slider?.description || 'Ini Deskripsi'}
 							</p>
@@ -63,7 +63,7 @@
 			{/each}
 		</Carousel.Content>
 
-		<Carousel.Previous />
-		<Carousel.Next />
+		<Carousel.Previous class="hidden md:block" />
+		<Carousel.Next class="hidden md:block" />
 	</Carousel.Root>
 </header>
