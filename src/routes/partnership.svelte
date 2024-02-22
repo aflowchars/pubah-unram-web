@@ -5,7 +5,7 @@
 
 	<div
 		id="partner__kami--logo"
-		class="mt-8 flex flex-row flex-nowrap items-center justify-between gap-10 overflow-x-auto xl:mt-10"
+		class="relative mt-8 flex flex-row flex-nowrap items-center justify-between gap-10 overflow-x-auto xl:mt-10"
 	>
 		<div
 			class="relative h-20 flex-shrink-0 transition-all duration-300 ease-in-out xl:w-20 2xl:h-28 2xl:w-28"

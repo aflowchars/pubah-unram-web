@@ -5,7 +5,7 @@
 
 <nav class="navbar fixed inset-0 z-50 h-20 w-full bg-gray-50">
 	<!-- Border -->
-	<div class="h-1 w-full bg-blue-950"></div>
+	<div class="h-1.5 w-full bg-blue-950"></div>
 
 	<!-- Top bar -->
 	<section
@@ -71,7 +71,7 @@
 
 	<!-- Main bar -->
 	<section
-		class="flex items-center justify-between border-b border-gray-200/50 bg-gray-50 px-5 py-3 md:px-10"
+		class="flex h-full flex-1 items-center justify-between border-b border-gray-200/50 bg-gray-50 px-5 py-3 md:px-10"
 	>
 		<!-- Logo -->
 		<div class="flex items-center xl:basis-1/3">
