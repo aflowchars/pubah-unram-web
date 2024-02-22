@@ -74,7 +74,7 @@
 		class="flex items-center justify-between border-b border-gray-200/50 bg-gray-50 px-10 py-3"
 	>
 		<!-- Logo -->
-		<div class="basis-1/3">
+		<div class="flex items-center xl:basis-1/3">
 			<a href="/" class="flex w-fit items-center justify-start gap-2">
 				<img
 					class="h-12 w-12"
@@ -92,7 +92,9 @@
 		</div>
 
 		<!-- Navigation -->
-		<div class="hidden basis-1/3 items-center justify-center gap-1.5 xl:flex">
+		<div
+			class="hidden items-center justify-center gap-1.5 xl:flex xl:basis-1/3"
+		>
 			<a
 				href="/profile"
 				class="px-3 py-1.5 text-sm hover:underline focus:bg-accent focus:text-accent-foreground {$page.url.href.includes(
@@ -228,8 +230,8 @@
 		</div>
 
 		<!-- Search bar -->
-		<div class="flex basis-1/3 items-center justify-end gap-4">
-			<div class="relative w-64">
+		<div class="flex items-center justify-end gap-1 xl:basis-1/3">
+			<div class="relative w-48 md:hidden lg:block">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					class="pointer-events-none absolute right-4 top-0 h-full w-4 text-gray-500"
@@ -240,6 +242,18 @@
 						d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
 					/>
 				</svg>
+
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="pointer-events-none absolute right-4 top-0 h-full w-4 text-gray-500"
+					fill="currentColor"
+					viewBox="0 0 256 256"
+				>
+					<path
+						d="M232.49,215.51,185,168a92.12,92.12,0,1,0-17,17l47.53,47.54a12,12,0,0,0,17-17ZM44,112a68,68,0,1,1,68,68A68.07,68.07,0,0,1,44,112Z"
+					/>
+				</svg>
+
 				<input
 					type="text"
 					class="w-full rounded-full border bg-gray-100 px-4 py-2 text-xs outline-0 transition-all duration-300 ease-in-out focus:bg-gray-50"
@@ -265,13 +279,13 @@
 						</div>
 
 						<svg
+							xmlns="http://www.w3.org/2000/svg"
 							class="pointer-events-none h-4 w-4"
 							fill="currentColor"
-							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 256 256"
 						>
 							<path
-								d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+								d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z"
 							/>
 						</svg>
 					</Menubar.Trigger>
@@ -281,6 +295,21 @@
 					</Menubar.Content>
 				</Menubar.Menu>
 			</Menubar.Root>
+
+			<div class="flex flex-nowrap items-center gap-2 p-1">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="h-5 w-5 text-gray-950"
+					fill="currentcolor"
+					viewBox="0 0 256 256"
+				>
+					<path
+						d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128ZM40,76H216a12,12,0,0,0,0-24H40a12,12,0,0,0,0,24ZM216,180H40a12,12,0,0,0,0,24H216a12,12,0,0,0,0-24Z"
+					/>
+				</svg>
+
+				<span class="text-sm font-medium">Menu</span>
+			</div>
 		</div>
 	</section>
 </nav>

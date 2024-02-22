@@ -3,7 +3,7 @@
 >
 	<h3 class="text-2xl font-semibold">Our Programs</h3>
 
-	<div class="mt-5 grid w-full grid-cols-2 gap-5 xl:grid-cols-3">
+	<div class="mt-5 grid w-full grid-cols-2 gap-5 lg:grid-cols-3">
 		<a
 			href="/programs/language-test"
 			class="group relative flex flex-col items-start gap-5 border border-transparent bg-gray-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 2xl:flex-row"

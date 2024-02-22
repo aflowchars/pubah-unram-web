@@ -1,6 +1,10 @@
 <script lang="ts">
 	import Autoplay from 'embla-carousel-autoplay';
 	import * as Carousel from '$lib/components/ui/carousel/index.js';
+
+	export let header: any;
+
+	console.log(header);
 </script>
 
 <header class="relative w-full px-10">
@@ -15,85 +19,46 @@
 		]}
 	>
 		<Carousel.Content class="w-full">
-			<Carousel.Item class="">
-				<figure
-					class="relative flex h-[50vh] w-full items-center justify-center overflow-hidden xl:h-[calc(100vh_-_108px)]"
+			{#each header as slider}
+				<Carousel.Item
+					class="relative flex h-[50vh] w-full items-center justify-center overflow-hidden md:h-[60vh] lg:h-[75vh] xl:h-[calc(100vh_-_108px)]"
 				>
 					<div
-						class="absolute z-10 h-full w-full bg-gradient-to-t from-stone-950/60 to-stone-950/10"
+						class="absolute z-10 h-full w-full bg-gradient-to-t from-stone-950/95 to-stone-950/10"
 					/>
 
 					<div
-						class="absolute z-20 flex h-full w-full flex-col items-start justify-end gap-2 p-10 text-white xl:pb-32"
+						class="absolute z-20 flex h-full w-full flex-col items-start justify-end p-10 text-white lg:pb-16 xl:pb-32"
 					>
-						<div class="flex w-full flex-col items-start xl:w-2/4">
-							<a
-								href="/program"
-								class="rounded-md bg-blue-950 px-2 py-1 text-xs font-semibold text-white"
+						<section class="flex flex-col items-start">
+							<h1
+								class="mt-2.5 text-2xl font-semibold md:w-10/12 lg:w-full xl:text-3xl"
 							>
-								Program
-							</a>
-
-							<h1 class="mt-2 text-3xl font-semibold">
-								Halo teman semua ayo kita sambut
+								{slider?.title || 'Ini Judul'}
 							</h1>
 
-							<p class="mt-3 text-sm text-stone-100">
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-								Nostrum tempora ab quia at molestiae temporibus suscipit
-								explicabo voluptas blanditiis mollitia earum alias praesentium
-								adipisci quaerat officia, sapiente cumque iure assumenda.
+							<p
+								class="mt-1 line-clamp-2 break-words text-sm leading-relaxed text-gray-300 md:w-10/12 lg:w-9/12 xl:mt-3 xl:w-3/4 xl:text-base"
+							>
+								{slider?.description || 'Ini Deskripsi'}
 							</p>
-						</div>
+
+							<a
+								href="/selengkapnya"
+								class="relative mt-3 border-2 border-transparent bg-amber-400 px-3 py-2 text-xs font-bold text-gray-950 transition-all duration-300 ease-in-out hover:bg-gray-900 xl:px-5 xl:py-3.5"
+							>
+								Selengkapnya
+							</a>
+						</section>
 					</div>
 
 					<img
-						class="relative z-0 h-full w-full object-cover object-top"
-						src="/assets/home/hero-1.jpg"
-						alt="unsplash1"
+						class="relative z-0 h-full w-full scale-100 object-cover object-top"
+						src={slider?.image?.src || '/assets/home/hero-2.jpg'}
+						alt={slider?.image?.alt || 'unsplash2'}
 					/>
-				</figure>
-			</Carousel.Item>
-
-			<Carousel.Item class="">
-				<figure
-					class="relative flex h-[50vh] w-full items-center justify-center overflow-hidden xl:h-[calc(100vh_-_108px)]"
-				>
-					<div
-						class="absolute z-10 h-full w-full bg-gradient-to-t from-stone-950/60 to-stone-950/10"
-					></div>
-
-					<div
-						class="absolute z-20 flex h-full w-full flex-col items-start justify-end gap-2 p-10 text-white xl:pb-32"
-					>
-						<div class="flex w-full flex-col items-start xl:w-2/4">
-							<a
-								href="/program"
-								class="rounded-md bg-blue-950 px-2 py-1 text-xs font-semibold text-white"
-							>
-								Program
-							</a>
-
-							<h1 class="mt-2 text-3xl font-semibold">
-								Halo teman semua ayo kita sambut
-							</h1>
-
-							<p class="mt-3 text-sm text-stone-100">
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-								Nostrum tempora ab quia at molestiae temporibus suscipit
-								explicabo voluptas blanditiis mollitia earum alias praesentium
-								adipisci quaerat officia, sapiente cumque iure assumenda.
-							</p>
-						</div>
-					</div>
-
-					<img
-						class="relative z-0 h-full w-full scale-125 object-cover object-top"
-						src="/assets/home/hero-2.jpg"
-						alt="unsplash2"
-					/>
-				</figure>
-			</Carousel.Item>
+				</Carousel.Item>
+			{/each}
 		</Carousel.Content>
 
 		<Carousel.Previous />

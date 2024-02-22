@@ -3,7 +3,9 @@
 >
 	<h3 class="text-2xl font-semibold">Berita Terbaru</h3>
 
-	<div class="mt-5 grid w-full grid-cols-2 gap-5 xl:grid-cols-4 xl:gap-2.5">
+	<div
+		class="mt-5 grid w-full grid-cols-2 gap-5 lg:grid-cols-3 xl:grid-cols-4 xl:gap-2.5"
+	>
 		{#each [1, 2, 3, 4, 5, 6, 7, 8] as item}
 			<a
 				href="/news/luluskan-249-mahasiswa-dekan-berpesan-nasib-baik-berawal-dari-ikhtiar"
@@ -28,7 +30,7 @@
 		{/each}
 	</div>
 
-	<div class="mt-8 flex justify-center xl:mt-10">
+	<div class="mt-8 flex justify-center md:mt-12 xl:mt-10">
 		<button
 			class="relative z-10 border border-transparent bg-amber-300 px-6 py-3 text-sm font-semibold text-gray-950 transition-all duration-300 ease-in-out hover:border-gray-950"
 		>
