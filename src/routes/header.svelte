@@ -28,7 +28,7 @@
 					/>
 
 					<div
-						class="absolute z-20 flex h-full w-full flex-col items-start justify-end p-5 pb-8 text-white md:p-10 lg:pb-16 xl:pb-24"
+						class="absolute z-20 flex h-full w-full flex-col items-start justify-end p-5 pb-10 text-white md:p-10 lg:pb-16 xl:pb-24"
 					>
 						<section class="flex flex-col items-start">
 							<p class="text-xs font-semibold underline md:text-sm">#Program</p>

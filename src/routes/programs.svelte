@@ -1,12 +1,12 @@
 <section
-	class="container mx-auto mt-12 max-w-screen-2xl px-5 md:mt-20 md:px-10 xl:mt-24 2xl:mt-32"
+	class="container mx-auto mt-16 max-w-screen-2xl px-5 md:mt-20 md:px-10 xl:mt-24 2xl:mt-32"
 >
 	<h3 class="text-xl font-semibold md:text-2xl">Our Programs</h3>
 
 	<div class="mt-5 grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
 		<a
 			href="/programs/language-test"
-			class="group relative flex flex-col items-start gap-5 border border-transparent bg-gray-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 2xl:flex-row"
+			class="group relative flex flex-col items-start gap-2.5 border border-transparent bg-gray-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 md:gap-5 2xl:flex-row"
 		>
 			<svg
 				class="absolute right-4 top-4 h-5 w-5 text-gray-950 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100"
@@ -51,7 +51,7 @@
 
 		<a
 			href="/programs/translation-&-interpreting"
-			class="group relative flex flex-col items-start gap-5 border border-transparent bg-gray-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 2xl:flex-row"
+			class="group relative flex flex-col items-start gap-2.5 border border-transparent bg-gray-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 md:gap-5 2xl:flex-row"
 		>
 			<svg
 				class="absolute right-4 top-4 h-5 w-5 text-gray-950 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100"
@@ -92,7 +92,7 @@
 
 		<a
 			href="/programs/resource-centre-&-self-access-centre"
-			class="group relative flex flex-col items-start gap-5 border border-transparent bg-gray-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 2xl:flex-row"
+			class="group relative flex flex-col items-start gap-2.5 border border-transparent bg-gray-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 md:gap-5 2xl:flex-row"
 		>
 			<svg
 				class="absolute right-4 top-4 h-5 w-5 text-gray-950 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100"
@@ -135,7 +135,7 @@
 
 		<a
 			href="/programs/bipa"
-			class="group relative flex flex-col items-start gap-5 border border-transparent bg-gray-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 2xl:flex-row"
+			class="group relative flex flex-col items-start gap-2.5 border border-transparent bg-gray-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 md:gap-5 2xl:flex-row"
 		>
 			<svg
 				class="absolute right-4 top-4 h-5 w-5 text-gray-950 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100"
@@ -189,7 +189,7 @@
 
 		<a
 			href="/programs/course"
-			class="group relative flex flex-col items-start gap-5 border border-transparent bg-gray-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 2xl:flex-row"
+			class="group relative flex flex-col items-start gap-2.5 border border-transparent bg-gray-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 md:gap-5 2xl:flex-row"
 		>
 			<svg
 				class="absolute right-4 top-4 h-5 w-5 text-gray-950 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100"
