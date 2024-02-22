@@ -47,7 +47,7 @@
 		>
 			<img
 				class="h-full w-full object-contain"
-				src="https://scontent.fsub8-1.fna.fbcdn.net/v/t39.30808-6/277555940_392599249536286_2256865301878417024_n.png?_nc_cat=110&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=EOxYERjocycAX8FHGOI&_nc_ht=scontent.fsub8-1.fna&oh=00_AfBfXNH9BitySFNttIyRY5WruL_a3xG1EdqZZHqcIzRhQg&oe=65D1D319"
+				src="/assets/general/sekolah-kristen-aletheia.png"
 				alt="Sekolah Kristen Alethia Logo"
 			/>
 		</div>

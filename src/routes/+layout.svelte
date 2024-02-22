@@ -5,7 +5,7 @@
 
 <Navbar />
 
-<main class="relative z-10 mt-[108px]">
+<main class="relative z-10 mt-[72px] md:mt-[108px]">
 	<slot />
 </main>
 
@@ -21,7 +21,7 @@
 				/>
 
 				<div
-					class="pointer-events-none flex flex-1 flex-col items-start gap-0.5 text-base font-semibold leading-none text-white"
+					class="pointer-events-none hidden flex-1 flex-col items-start gap-0.5 text-base font-semibold leading-none text-white md:flex"
 				>
 					<span>Pusat Bahasa</span>
 					<span>Universitas Mataram</span>

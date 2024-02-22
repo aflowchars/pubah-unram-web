@@ -28,9 +28,11 @@
 					/>
 
 					<div
-						class="absolute z-20 flex h-full w-full flex-col items-start justify-end p-10 text-white lg:pb-16 xl:pb-32"
+						class="absolute z-20 flex h-full w-full flex-col items-start justify-end p-10 text-white lg:pb-16 xl:pb-24"
 					>
 						<section class="flex flex-col items-start">
+							<p class="text-sm font-semibold underline">#Program</p>
+
 							<h1
 								class="mt-2.5 text-2xl font-semibold md:w-10/12 lg:w-full xl:text-3xl"
 							>
@@ -44,8 +46,8 @@
 							</p>
 
 							<a
-								href="/selengkapnya"
-								class="relative mt-3 border-2 border-transparent bg-amber-400 px-3 py-2 text-xs font-bold text-gray-950 transition-all duration-300 ease-in-out hover:bg-gray-900 xl:px-5 xl:py-3.5"
+								href={slider?.link || '/'}
+								class="relative mt-6 border-2 border-transparent bg-gray-50 px-3 py-2 text-xs font-bold text-gray-950 transition-all duration-300 ease-in-out hover:bg-gray-300 xl:mt-10 xl:px-5 xl:py-3 xl:text-sm"
 							>
 								Selengkapnya
 							</a>

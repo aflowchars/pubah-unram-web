@@ -9,7 +9,7 @@
 
 	<!-- Top bar -->
 	<section
-		class="flex items-center justify-between bg-blue-950 px-12 py-1.5 text-gray-50"
+		class="hidden items-center justify-between bg-blue-950 px-5 py-1.5 text-gray-50 md:flex md:px-12"
 	>
 		<!-- Logo -->
 		<div class="flex items-center gap-3">
@@ -71,7 +71,7 @@
 
 	<!-- Main bar -->
 	<section
-		class="flex items-center justify-between border-b border-gray-200/50 bg-gray-50 px-10 py-3"
+		class="flex items-center justify-between border-b border-gray-200/50 bg-gray-50 px-5 py-3 md:px-10"
 	>
 		<!-- Logo -->
 		<div class="flex items-center xl:basis-1/3">
@@ -83,7 +83,7 @@
 				/>
 
 				<div
-					class="pointer-events-none flex flex-1 flex-col items-start gap-0.5 text-sm font-semibold leading-none"
+					class="pointer-events-none hidden flex-1 flex-col items-start gap-0.5 text-sm font-semibold leading-none md:flex"
 				>
 					<span>Pusat Bahasa</span>
 					<span>Universitas Mataram</span>
@@ -231,7 +231,7 @@
 
 		<!-- Search bar -->
 		<div class="flex items-center justify-end gap-1 xl:basis-1/3">
-			<div class="relative w-48 md:hidden lg:block">
+			<div class="relative hidden w-48 lg:block">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					class="pointer-events-none absolute right-4 top-0 h-full w-4 text-gray-500"
@@ -261,7 +261,7 @@
 				/>
 			</div>
 
-			<Menubar.Root>
+			<Menubar.Root class="hidden md:block">
 				<Menubar.Menu>
 					<Menubar.Trigger
 						class="relative flex cursor-pointer items-center gap-2 py-2"
@@ -296,10 +296,10 @@
 				</Menubar.Menu>
 			</Menubar.Root>
 
-			<div class="flex flex-nowrap items-center gap-2 p-1">
+			<div class="flex flex-nowrap items-center gap-2 p-1 xl:hidden">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					class="h-5 w-5 text-gray-950"
+					class="h-6 w-6 text-gray-950 md:h-5 md:w-5"
 					fill="currentcolor"
 					viewBox="0 0 256 256"
 				>
@@ -308,7 +308,7 @@
 					/>
 				</svg>
 
-				<span class="text-sm font-medium">Menu</span>
+				<span class="hidden text-sm font-medium md:block">Menu</span>
 			</div>
 		</div>
 	</section>

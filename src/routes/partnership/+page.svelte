@@ -12,7 +12,7 @@
 	class="mx-auto max-w-screen-lg space-y-5 px-10 pb-20 pt-10 text-justify text-lg leading-loose text-gray-600"
 >
 	<section class="space-y-2.5">
-		<h3 class="text-2xl font-semibold text-gray-950">Tentang Kerjasama</h3>
+		<!-- <h3 class="text-2xl font-semibold text-gray-950">Tentang Kerjasama</h3> -->
 
 		<h3 class="text-xl font-semibold text-blue-800">Kerjasama Internal</h3>
 
