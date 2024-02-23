@@ -3,8 +3,6 @@
 	import * as Carousel from '$lib/components/ui/carousel/index.js';
 
 	export let header: any;
-
-	console.log(header);
 </script>
 
 <header class="relative w-full px-0 md:px-10">
@@ -21,7 +19,7 @@
 		<Carousel.Content class="w-full">
 			{#each header as slider}
 				<Carousel.Item
-					class="relative flex h-[75vh] w-full items-center justify-center overflow-hidden md:h-[60vh] lg:h-[75vh] xl:h-[calc(100vh_-_108px)]"
+					class="relative flex h-[75vh] w-full items-center justify-center overflow-hidden md:h-[60vh] lg:h-[75vh] xl:h-[calc(100vh_-_6.75rem)]"
 				>
 					<div
 						class="absolute z-10 h-full w-full bg-gradient-to-t from-stone-950/95 to-stone-950/10"
@@ -34,7 +32,7 @@
 							<p class="text-xs font-semibold underline md:text-sm">#Program</p>
 
 							<h1
-								class="mt-2.5 line-clamp-2 text-lg font-semibold md:w-10/12 md:text-2xl lg:w-full xl:text-3xl"
+								class="mt-2.5 line-clamp-2 text-xl font-semibold md:w-10/12 md:text-2xl lg:w-full xl:text-3xl"
 							>
 								{slider?.title || 'Ini Judul'}
 							</h1>
@@ -63,7 +61,11 @@
 			{/each}
 		</Carousel.Content>
 
-		<Carousel.Previous class="hidden md:block" />
-		<Carousel.Next class="hidden md:block" />
+		<div class="hidden md:block">
+			<Carousel.Previous />
+		</div>
+		<div class="hidden md:block">
+			<Carousel.Next />
+		</div>
 	</Carousel.Root>
 </header>

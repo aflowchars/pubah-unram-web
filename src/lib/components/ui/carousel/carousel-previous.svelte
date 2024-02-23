@@ -1,5 +1,9 @@
 <script lang="ts">
-	import { Button, type Props, buttonVariants } from '$lib/components/ui/button/index.js';
+	import {
+		Button,
+		type Props,
+		buttonVariants
+	} from '$lib/components/ui/button/index.js';
 	import { cn } from '$lib/utils.js';
 	import { ArrowLeft } from 'radix-icons-svelte';
 	import type { VariantProps } from 'tailwind-variants';
@@ -9,7 +13,8 @@
 
 	let className: $$Props['class'] = undefined;
 	export { className as class };
-	export let variant: VariantProps<typeof buttonVariants>['variant'] = 'outline';
+	export let variant: VariantProps<typeof buttonVariants>['variant'] =
+		'outline';
 	export let size: VariantProps<typeof buttonVariants>['size'] = 'icon';
 
 	const { orientation, canScrollPrev, scrollPrev, handleKeyDown } =
@@ -20,7 +25,7 @@
 	{variant}
 	{size}
 	class={cn(
-		'absolute h-8 w-8 touch-manipulation rounded-full',
+		'absolute flex h-8 w-8 touch-manipulation items-center justify-center rounded-full',
 		$orientation === 'horizontal'
 			? 'left-5 top-1/2 -translate-y-1/2'
 			: '-top-5 left-1/2 -translate-x-1/2 rotate-90',

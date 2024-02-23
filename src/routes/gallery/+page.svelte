@@ -1,3 +1,9 @@
+<script>
+	import { SeoHead } from '$lib/components/base';
+</script>
+
+<SeoHead title="Galeri" />
+
 <div class="min-h-screen">
 	<div
 		class="container mx-auto flex min-h-screen max-w-screen-2xl flex-col items-center px-10 py-10 md:gap-2.5 xl:gap-5"

@@ -7,12 +7,23 @@
 	import News from './news.svelte';
 	import Partnership from './partnership.svelte';
 	//----------------------------------------------------------//
-	/** @type {import('./$types').PageData} */
 	export let data;
+
 	let { header } = data;
-	console.log(data);
 	//----------------------------------------------------------//
+	// let arr = ['aaa', 'bbb', 'ccc', 'ddd', 'eee'];
+	// arr.splice(3, 4);
+	//----------------------------------------------------------//
+	$: innerWidth = 0;
+
+	console.log(innerWidth);
 </script>
+
+<svelte:window bind:innerWidth />
+
+<p>
+	{innerWidth}
+</p>
 
 <SeoHead title="Beranda" />
 

@@ -57,6 +57,9 @@ const config = {
 			fontFamily: {
 				sans: [...fontFamily.sans],
 				inter: ['Inter', ...fontFamily.sans]
+			},
+			strokeWidth: {
+				'1.5': '1.5px'
 			}
 		}
 	}

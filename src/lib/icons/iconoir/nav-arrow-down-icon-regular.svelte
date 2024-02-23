@@ -1,0 +1,15 @@
+<script lang="ts">
+	let clx = 'nav-arrow-down-icon-regular';
+
+	export { clx as class };
+</script>
+
+<svg
+	class={clx}
+	viewBox="0 0 24 24"
+	fill="none"
+	stroke="currentColor"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<path d="M6 9L12 15L18 9" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

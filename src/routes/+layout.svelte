@@ -1,12 +1,14 @@
 <script lang="ts">
 	import '../app.pcss';
 	import { Footer, Navbar } from '$lib/components/base';
+
+	export let data;
 </script>
 
-<Navbar />
+<Navbar datas={data.navbar} />
 
-<main class="relative z-10 mt-[77px] md:mt-[108px]">
+<main class="relative z-10 mt-16 md:mt-[6.75rem]">
 	<slot />
 </main>
 
-<Footer />
+<Footer datas={data.footer} />
