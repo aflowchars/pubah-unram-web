@@ -1,5 +1,5 @@
 <section
-	class="container mx-auto mb-16 mt-10 max-w-screen-2xl px-5 md:mt-16 md:px-10 xl:mb-40 xl:mt-20"
+	class="container mx-auto mt-10 max-w-screen-2xl px-5 md:mt-16 md:px-10 xl:mt-20"
 >
 	<h3 class="text-2xl font-semibold">Berita Terbaru</h3>
 

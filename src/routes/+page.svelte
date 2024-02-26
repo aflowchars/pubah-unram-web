@@ -6,6 +6,7 @@
 	import Programs from './programs.svelte';
 	import News from './news.svelte';
 	import Partnership from './partnership.svelte';
+	import SocialMedia from './social-media.svelte';
 	//----------------------------------------------------------//
 	export let data;
 
@@ -14,16 +15,17 @@
 	// let arr = ['aaa', 'bbb', 'ccc', 'ddd', 'eee'];
 	// arr.splice(3, 4);
 	//----------------------------------------------------------//
-	$: innerWidth = 0;
+	// $: innerWidth = 0;
 
-	console.log(innerWidth);
+	// console.log(innerWidth);
 </script>
 
+<!--
 <svelte:window bind:innerWidth />
 
 <p>
 	{innerWidth}
-</p>
+</p> -->
 
 <SeoHead title="Beranda" />
 
@@ -34,3 +36,5 @@
 <Programs />
 
 <News />
+
+<SocialMedia />

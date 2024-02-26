@@ -7,7 +7,7 @@
 
 <Navbar datas={data.navbar} />
 
-<main class="relative z-10 mt-16 md:mt-[6.75rem]">
+<main class="relative z-10 mb-16 mt-16 md:mb-28 md:mt-[6.75rem]">
 	<slot />
 </main>
 
