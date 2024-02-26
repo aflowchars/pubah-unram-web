@@ -32,7 +32,7 @@
 	>
 		<div class="h-1 w-full bg-blue-950" />
 
-		<nav class="flex items-center justify-between border-b p-5">
+		<nav class="flex w-full items-center justify-between border-b p-5">
 			<a
 				on:click={() =>
 					setTimeout(() => {

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.pcss';
+	import { page } from '$app/stores';
 	import { Footer, Navbar } from '$lib/components/base';
 
 	export let data;
@@ -7,7 +8,7 @@
 
 <Navbar datas={data.navbar} />
 
-<main class="relative z-10 mb-16 mt-16 md:mb-28 md:mt-[6.75rem]">
+<main class={$page.url.href.includes('/programs') ? 'mb-0 mt-20' : 'my-20'}>
 	<slot />
 </main>
 

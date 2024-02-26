@@ -3,11 +3,11 @@
 </script>
 
 <!-- Border -->
-<div class="block h-1.5 w-full bg-blue-950 md:hidden"></div>
+<div class="block h-1.5 w-full bg-blue-950 md:hidden" />
 
 <!-- Top bar -->
 <section
-	class="hidden items-center justify-between bg-blue-950 px-5 py-1.5 text-gray-50 md:flex md:px-12"
+	class="hidden w-full items-center justify-between bg-blue-950 px-5 py-1.5 text-gray-50 md:flex md:px-12"
 >
 	<!-- Logo -->
 	<div class="flex items-center gap-3">

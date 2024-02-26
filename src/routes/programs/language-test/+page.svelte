@@ -1,40 +1,18 @@
 <script>
 	import { SeoHead } from '$lib/components/base';
+	import HeroPrograms from '../hero-programs.svelte';
+
+	export let data;
+
+	const { hero } = data;
 </script>
 
 <SeoHead title="Tes Kemampuan Bahasa Asing" />
 
-<div class="container mx-auto max-w-screen-2xl px-10">
-	<header class="relative h-[50vh] overflow-hidden">
-		<img
-			class="absolute inset-0 -z-10 h-full w-full object-cover object-center"
-			src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-			alt="Language Test"
-		/>
-
-		<div
-			class="absolute inset-0 z-0 h-full w-full bg-gradient-to-t from-gray-950/80 to-gray-50/25"
-		/>
-
-		<div
-			class="relative z-10 flex h-full w-full flex-col justify-end p-10 text-white"
-		>
-			<nav class="flex w-3/4 flex-col items-start space-y-2.5 text-left">
-				<h1 class="text-4xl font-medium tracking-tighter">
-					Tes Kemampuan Bahasa Asing
-				</h1>
-
-				<p class="w-7/12 text-base leading-relaxed text-gray-300">
-					Tes Kemampuan Bahasa Asing adalah tes yang dilakukan oleh Unram untuk
-					mengetahui kemampuan bahasa asing.
-				</p>
-			</nav>
-		</div>
-	</header>
-</div>
+<HeroPrograms data={hero} />
 
 <section
-	class="mx-auto mt-20 max-w-screen-lg space-y-10 px-10 text-justify text-lg leading-loose text-gray-600"
+	class="mx-auto mt-10 max-w-screen-lg space-y-10 px-10 text-left text-lg leading-loose text-gray-600 xl:mt-20"
 >
 	<section class="space-y-2.5">
 		<h3 class="text-2xl font-semibold text-gray-950">Tentang Tes Kemampuan</h3>
@@ -152,11 +130,13 @@
 	</section>
 </section>
 
-<nav class="mt-20 flex items-center justify-between bg-blue-50 px-32 py-5">
+<nav
+	class="mt-10 flex items-center justify-between bg-blue-50 px-6 py-5 md:px-10 xl:mt-20 xl:px-32"
+>
 	<a href="/programs/course" class="flex flex-col items-start">
 		<h6 class="text-xs font-semibold text-gray-500">Sebelumnya</h6>
 
-		<p class="text-lg font-semibold text-gray-950">Course</p>
+		<p class="text-base font-semibold text-gray-950 md:text-lg">Course</p>
 	</a>
 
 	<a
@@ -165,7 +145,7 @@
 	>
 		<h6 class="text-xs font-semibold text-gray-500">Selanjutnya</h6>
 
-		<p class="text-lg font-semibold text-gray-950">
+		<p class="text-base font-semibold text-gray-950 md:text-lg">
 			Translation & Interpreting
 		</p>
 	</a>

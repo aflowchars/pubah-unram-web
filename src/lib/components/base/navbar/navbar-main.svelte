@@ -16,7 +16,7 @@
 
 <!-- Main bar -->
 <section
-	class="flex h-full flex-1 items-center justify-between border-b border-gray-200/50 bg-gray-50 px-5 py-3 md:px-10"
+	class="flex h-full w-full flex-1 items-center justify-between border-b border-gray-200/50 bg-gray-50 px-5 py-3 md:px-10"
 >
 	<!-- Logo -->
 	<div class="flex items-center xl:basis-1/3">
