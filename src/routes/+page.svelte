@@ -15,8 +15,6 @@
 	// arr.splice(3, 4);
 	//----------------------------------------------------------//
 	$: innerWidth = 0;
-
-	console.log(innerWidth);
 </script>
 
 <svelte:window bind:innerWidth />
