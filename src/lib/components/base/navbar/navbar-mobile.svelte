@@ -64,6 +64,10 @@
 				<li class="flex w-full flex-col items-start">
 					{#if menu.type === 'link'}
 						<a
+							on:click={() =>
+								setTimeout(() => {
+									isMobileNav.set(false);
+								}, 500)}
 							href={menu.link}
 							class="w-full border-b border-gray-200 py-5 text-2xl font-medium tracking-tight md:px-5 md:py-10 md:text-5xl lg:py-5"
 						>
@@ -89,6 +93,10 @@
 									<div class="mt-5 flex w-full flex-col flex-nowrap md:px-8">
 										{#each menu.menus as child}
 											<a
+												on:click={() =>
+													setTimeout(() => {
+														isMobileNav.set(false);
+													}, 500)}
 												href={child.link}
 												class="py-2.5 text-lg text-gray-600 md:py-5 md:text-2xl lg:py-2.5 lg:text-xl"
 											>
