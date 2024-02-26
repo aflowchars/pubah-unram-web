@@ -2,6 +2,7 @@
 	//---------------------------------------------------------//
 	import { page } from '$app/stores';
 	import * as Menubar from '$lib/components/ui/menubar';
+	import { isMobileNav } from '$lib/stores';
 	//---------------------------------------------------------//
 	import {
 		MenuScaleIconRegular,
@@ -140,12 +141,16 @@
 			</Menubar.Menu>
 		</Menubar.Root>
 
-		<div class="flex flex-nowrap items-center gap-2 p-1 xl:hidden">
+		<button
+			type="button"
+			on:click={() => isMobileNav.set(true)}
+			class="flex flex-nowrap items-center gap-2 p-1 xl:hidden"
+		>
 			<MenuScaleIconRegular
 				class="h-6 w-6 stroke-2 text-gray-950 md:h-5 md:w-5"
 			/>
 
 			<span class="hidden text-sm font-medium md:block">Menu</span>
-		</div>
+		</button>
 	</div>
 </section>

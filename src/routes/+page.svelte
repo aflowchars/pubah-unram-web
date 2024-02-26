@@ -37,4 +37,4 @@
 
 <News />
 
-<SocialMedia />
+<!-- <SocialMedia /> -->
