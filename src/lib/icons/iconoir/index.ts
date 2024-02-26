@@ -5,6 +5,7 @@ import MoreHorizIconRegular from './more-horiz-icon-regular.svelte';
 import NavArrowDownIconRegular from './nav-arrow-down-icon-regular.svelte';
 import NavArrowLeftIconRegular from './nav-arrow-left-icon-regular.svelte';
 import SearchIconRegular from './search-icon-regular.svelte';
+import XMarkIconRegular from './x-mark-icon-regular.svelte';
 
 export {
 	FacebookIconRegular,
@@ -13,5 +14,6 @@ export {
 	MoreHorizIconRegular,
 	NavArrowDownIconRegular,
 	NavArrowLeftIconRegular,
-	SearchIconRegular
+	SearchIconRegular,
+	XMarkIconRegular
 };

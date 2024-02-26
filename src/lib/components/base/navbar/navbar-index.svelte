@@ -1,6 +1,7 @@
 <script lang="ts">
 	import NavbarTopbar from './navbar-top.svelte';
 	import NavbarMain from './navbar-main.svelte';
+	import NavbarMobile from './navbar-mobile.svelte';
 
 	export let datas: any;
 </script>
@@ -9,4 +10,6 @@
 	<NavbarTopbar datas={datas.topbar} />
 
 	<NavbarMain datas={datas.mainbar} />
+
+	<NavbarMobile datas={datas.mainbar} />
 </nav>
