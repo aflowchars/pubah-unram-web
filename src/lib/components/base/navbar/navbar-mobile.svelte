@@ -68,7 +68,7 @@
 							</Accordion.Trigger>
 
 							<Accordion.Content class="w-full [&>div]:!py-0">
-								<div class="mt-5 flex w-full flex-col flex-nowrap lg:px-8">
+								<div class="mt-5 flex w-full flex-col flex-nowrap md:px-8">
 									{#each menu.menus as child}
 										<a
 											href={child.link}
