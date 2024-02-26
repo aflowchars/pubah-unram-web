@@ -12,7 +12,7 @@
 </script>
 
 <div
-	class="fixed inset-0 z-[999] h-full min-h-screen w-full overflow-y-auto bg-white"
+	class="fixed inset-0 z-[999] block h-full min-h-screen w-full overflow-y-auto bg-white xl:hidden"
 >
 	<div class="h-1 w-full bg-blue-950" />
 
@@ -40,20 +40,23 @@
 	</nav>
 
 	<ul
-		class="mt-5 flex flex-col items-center gap-2.5 overflow-y-auto px-5 md:mt-10 md:gap-10"
+		class="mt-5 flex w-full flex-col items-center gap-2.5 overflow-y-auto px-5 md:mt-10 md:gap-10 lg:mt-5 lg:gap-0"
 	>
 		{#each datas as menu}
-			<li
-				class="w-full border-b border-gray-200 py-5 text-2xl font-medium tracking-tight md:px-5 md:py-10 md:text-5xl"
-			>
+			<li class="flex w-full flex-col items-start">
 				{#if menu.type === 'link'}
-					<a href={menu.link}> {menu.label} </a>
+					<a
+						href={menu.link}
+						class="w-full border-b border-gray-200 py-5 text-2xl font-medium tracking-tight md:px-5 md:py-10 md:text-5xl lg:py-5"
+					>
+						{menu.label}
+					</a>
 				{:else if menu.type === 'dropdown'}
-					<Accordion.Root>
-						<Accordion.Item value="item-1" class="border-b-0">
+					<Accordion.Root class="w-full border-b-0">
+						<Accordion.Item value="item-1" class="w-full border-b-0">
 							<Accordion.Trigger
 								showIcon={false}
-								class="flex w-full items-center justify-between border-b-0 py-0 shadow-none md:pb-4"
+								class="w-full border-b border-gray-200 py-5 text-2xl font-medium tracking-tight md:px-5 md:py-10 md:text-5xl lg:py-5"
 							>
 								<span class="text-2xl font-medium tracking-tight md:text-5xl">
 									{menu.label}
@@ -64,12 +67,12 @@
 								/>
 							</Accordion.Trigger>
 
-							<Accordion.Content class="[&>div]:!py-0">
-								<div class="mt-5 flex flex-col flex-nowrap">
+							<Accordion.Content class="w-full [&>div]:!py-0">
+								<div class="mt-5 flex w-full flex-col flex-nowrap lg:px-8">
 									{#each menu.menus as child}
 										<a
 											href={child.link}
-											class="py-2.5 text-lg text-gray-600 md:py-5 md:text-2xl"
+											class="py-2.5 text-lg text-gray-600 md:py-5 md:text-2xl lg:py-2.5 lg:text-xl"
 										>
 											{child.label}
 										</a>
