@@ -33,7 +33,14 @@
 		<div class="h-1 w-full bg-blue-950" />
 
 		<nav class="flex items-center justify-between border-b p-5">
-			<a href="/" class="flex w-fit items-center justify-start gap-2">
+			<a
+				on:click={() =>
+					setTimeout(() => {
+						isMobileNav.set(false);
+					}, 500)}
+				href="/"
+				class="flex w-fit items-center justify-start gap-2"
+			>
 				<img
 					class="h-12 w-12"
 					src="/assets/general/unram-logo.png"
@@ -58,7 +65,7 @@
 		</nav>
 
 		<ul
-			class="mt-5 flex w-full flex-col items-center gap-2.5 overflow-y-auto px-5 md:mt-10 md:gap-10 lg:mt-5 lg:gap-0"
+			class="mt-5 flex w-full flex-col items-center gap-2.5 overflow-y-auto px-5 md:gap-0 lg:mt-5"
 		>
 			{#each datas as menu}
 				<li class="flex w-full flex-col items-start">
@@ -69,7 +76,7 @@
 									isMobileNav.set(false);
 								}, 500)}
 							href={menu.link}
-							class="w-full border-b border-gray-200 py-5 text-2xl font-medium tracking-tight md:px-5 md:py-10 md:text-5xl lg:py-5"
+							class="w-full border-b border-gray-200 py-5 text-2xl font-medium tracking-tight md:px-5 md:py-5 md:text-3xl lg:py-5"
 						>
 							{menu.label}
 						</a>
@@ -78,9 +85,9 @@
 							<Accordion.Item value="item-1" class="w-full border-b-0">
 								<Accordion.Trigger
 									showIcon={false}
-									class="w-full border-b border-gray-200 py-5 text-2xl font-medium tracking-tight md:px-5 md:py-10 md:text-5xl lg:py-5"
+									class="w-full border-b border-gray-200 py-5 text-2xl font-medium tracking-tight md:px-5 md:py-5 lg:py-5"
 								>
-									<span class="text-2xl font-medium tracking-tight md:text-5xl">
+									<span class="text-2xl font-medium tracking-tight md:text-3xl">
 										{menu.label}
 									</span>
 
@@ -90,7 +97,9 @@
 								</Accordion.Trigger>
 
 								<Accordion.Content class="w-full [&>div]:!py-0">
-									<div class="mt-5 flex w-full flex-col flex-nowrap md:px-8">
+									<div
+										class="mt-5 flex w-full flex-col flex-nowrap md:px-5 lg:px-8"
+									>
 										{#each menu.menus as child}
 											<a
 												on:click={() =>
@@ -98,7 +107,7 @@
 														isMobileNav.set(false);
 													}, 500)}
 												href={child.link}
-												class="py-2.5 text-lg text-gray-600 md:py-5 md:text-2xl lg:py-2.5 lg:text-xl"
+												class="py-2.5 text-lg text-gray-600 md:py-5 md:text-lg lg:py-2.5"
 											>
 												{child.label}
 											</a>
