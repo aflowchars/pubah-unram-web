@@ -17,7 +17,9 @@
 	export let datas: Datas;
 </script>
 
-<nav class="mt-10 flex items-center justify-between bg-blue-50 py-5 md:mt-20">
+<nav
+	class="mt-8 flex items-center justify-between bg-blue-50 py-5 md:mt-10 xl:mt-20"
+>
 	<div
 		class="container mx-auto flex max-w-screen-2xl items-center justify-between px-5 md:px-10"
 	>

@@ -77,7 +77,7 @@
 									isMobileNav.set(false);
 								}, 500)}
 							href={menu.link}
-							class="w-full border-b border-gray-200 py-5 text-xl font-medium tracking-tight md:px-5 md:py-5 md:text-3xl lg:py-5"
+							class="w-full border-b border-gray-200 py-5 text-lg font-medium tracking-tight md:px-5 md:py-5 md:text-2xl lg:py-5 lg:text-3xl"
 						>
 							{menu.label}
 						</a>
@@ -88,7 +88,9 @@
 									showIcon={false}
 									class="w-full border-b border-gray-200 py-5 font-medium tracking-tight md:px-5 md:py-5 lg:py-5"
 								>
-									<span class="text-xl font-medium tracking-tight md:text-3xl">
+									<span
+										class="text-lg font-medium tracking-tight md:text-2xl lg:text-3xl"
+									>
 										{menu.label}
 									</span>
 

@@ -1,5 +1,6 @@
 <script>
 	import { SeoHead } from '$lib/components/base';
+
 	import HeroPrograms from '../hero-programs.svelte';
 	import NavigationPages from '../navigation-pages.svelte';
 
@@ -10,7 +11,7 @@
 
 <HeroPrograms data={data.hero} />
 
-<section class="container mx-auto mt-8 max-w-screen-lg px-5 md:mt-10 md:px-10">
+<div class="container mx-auto mt-8 max-w-screen-lg px-5 md:mt-10 md:px-10">
 	<article class="content_wrap">
 		<h3>Tentang BIPA</h3>
 
@@ -50,7 +51,7 @@
 			Menulis), Seni dan Budaya Indonesia, dan Sistem Pendidikan di Indonesia.
 		</p>
 
-		<h4>Target capaian pada program BIPA di UPA Bahasa adalah:</h4>
+		<h5>Target capaian pada program BIPA di UPA Bahasa adalah:</h5>
 
 		<ul>
 			<li>
@@ -78,11 +79,11 @@
 			</li>
 		</ul>
 
-		<h4>
+		<h5>
 			Dalam merealisasikan program pembelajaran, BIPA, UPA Bahasa Universitas
 			Mataram menawarkan enam tingkatan yaitu, dimana kompetensi yang dicapai
 			pada setiap level program BIPA UPA Bahasa adalah sebagai berikut:
-		</h4>
+		</h5>
 
 		<ul>
 			<li>
@@ -126,9 +127,9 @@
 			</li>
 		</ul>
 
-		<h4>Rincian Pembelajaran BIPA</h4>
+		<h5>Rincian Pembelajaran BIPA</h5>
 
-		<h4>Tingkat 1 dan 2:</h4>
+		<h5>Tingkat 1 dan 2:</h5>
 
 		<ol>
 			<li>
@@ -161,7 +162,7 @@
 			</li>
 		</ol>
 
-		<h4>Tingkat 3 dan 4:</h4>
+		<h5>Tingkat 3 dan 4:</h5>
 
 		<ol>
 			<li>
@@ -189,7 +190,7 @@
 			<li>Memahami sistem negara pemerintahan dan warga negara Indonesia.</li>
 		</ol>
 
-		<h4>Tingkat 5 dan 6:</h4>
+		<h5>Tingkat 5 dan 6:</h5>
 
 		<ol>
 			<li>
@@ -223,7 +224,7 @@
 			</li>
 		</ol>
 
-		<h4>Kegiatan Program BIPA</h4>
+		<h5>Kegiatan Program BIPA</h5>
 
 		<ol>
 			<li>Aktivitas di dalam Kelas</li>
@@ -275,6 +276,6 @@
 			</p>
 		</ol>
 	</article>
-</section>
+</div>
 
 <NavigationPages datas={data.nav_page} />

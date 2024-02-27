@@ -9,14 +9,12 @@
 
 <HeroPrograms data={data.hero} />
 
-<section
-	class="mx-auto mt-10 max-w-screen-lg space-y-10 px-10 text-justify text-lg leading-loose text-gray-600"
->
-	<section class="flex flex-col items-start gap-2.5">
-		<h3 class="text-2xl font-semibold text-gray-950">Tentang Program</h3>
+<div class="container mx-auto mt-8 max-w-screen-lg px-5 md:mt-10 md:px-10">
+	<article class="content_wrap">
+		<h3>Tentang Program</h3>
 
-		<div class="block space-y-2.5 pt-5">
-			<h4 class="text-xl font-semibold text-gray-800">1. Resosurce Centre</h4>
+		<section class="block space-y-2.5 pt-5">
+			<h4>1. Resosurce Centre</h4>
 
 			<p>
 				Pusat Sumber Daya terletak di salah satu ruangan di Ruang Staf. RC ini
@@ -48,10 +46,10 @@
 				disarankan untuk kursus individual tidak dipinjamkan baik kepada
 				fakultas maupun anggota SAC.
 			</p>
-		</div>
+		</section>
 
-		<div class="block space-y-2.5 pt-5">
-			<h4 class="text-xl font-semibold text-gray-800">2. Self-Access Centre</h4>
+		<section class="block space-y-2.5 pt-5">
+			<h4>2. Self-Access Centre</h4>
 
 			<p>
 				Pusat Akses Mandiri (SAC) merupakan pusat pembelajaran bahasa yang
@@ -65,9 +63,9 @@
 				SAC, diharapkan siswa dapat belajar bahasa Inggris secara mandiri dan
 				efektif sesuai dengan kebutuhan dan minat pribadi mereka.
 			</p>
-		</div>
+		</section>
 
-		<div class="block space-y-2.5 pt-5">
+		<section class="block space-y-2.5 pt-5">
 			<h4 class="text-xl font-semibold text-gray-800">A. Fasilitas</h4>
 
 			<p>
@@ -94,9 +92,9 @@
 				yang cukup besar. Ruangan ini digunakan untuk ruang audiovisual, sudut
 				berbicara, rak majalah, dan informasi studi di luar negeri.
 			</p>
-		</div>
+		</section>
 
-		<div class="block space-y-2.5 pt-5">
+		<section class="block space-y-2.5 pt-5">
 			<h4 class="text-xl font-semibold text-gray-800">B. Jam Buka</h4>
 
 			<p>
@@ -109,9 +107,9 @@
 				Jumat & Sabtu 08.00 – 12.00 <br />
 				Minggu dan hari libur tutup
 			</p>
-		</div>
+		</section>
 
-		<div class="block space-y-2.5 pt-5">
+		<section class="block space-y-2.5 pt-5">
 			<h4 class="text-xl font-semibold text-gray-800">C. Keanggotaan</h4>
 
 			<p>
@@ -120,7 +118,7 @@
 				untuk:
 			</p>
 
-			<ol class="list-decimal pl-5">
+			<ol>
 				<li>Mengisi formulir</li>
 
 				<li>Membayar biaya pendaftaran:</li>
@@ -136,9 +134,9 @@
 					di antaranya masih aktif.
 				</li>
 			</ol>
-		</div>
+		</section>
 
-		<div class="block space-y-2.5 pt-5">
+		<section class="block space-y-2.5 pt-5">
 			<h4 class="text-xl font-semibold text-gray-800">D. Peminjaman Buku</h4>
 
 			<p>
@@ -158,9 +156,9 @@
 				untuk meminjam dua buku selama periode peminjaman satu bulan. Koordinasi
 				peminjaman buku-buku ini adalah tanggung jawab Koordinator SAC.
 			</p>
-		</div>
+		</section>
 
-		<div class="block space-y-2.5 pt-5">
+		<section class="block space-y-2.5 pt-5">
 			<h4 class="text-xl font-semibold text-gray-800">
 				E. Training of Trainers (ToT)
 			</h4>
@@ -171,7 +169,7 @@
 				pelajaran lainnya. Program ini mencakup:
 			</p>
 
-			<ol class="list-decimal pl-5">
+			<ol>
 				<li>Pengembangan Profesional Guru</li>
 
 				<li>Pelatihan Pembelajaran Bahasa Inggris</li>
@@ -190,8 +188,8 @@
 
 				<li>Pelatihan Penerjemahan</li>
 			</ol>
-		</div>
-	</section>
-</section>
+		</section>
+	</article>
+</div>
 
 <NavigationPages datas={data.nav_page} />

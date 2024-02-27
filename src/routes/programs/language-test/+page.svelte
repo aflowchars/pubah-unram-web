@@ -12,14 +12,10 @@
 
 <HeroPrograms data={hero} />
 
-<section
-	class="container mx-auto mt-10 max-w-screen-lg space-y-10 px-5 text-left text-lg leading-loose text-gray-600 md:px-10 xl:mt-20"
->
+<div class="container mx-auto mt-8 max-w-screen-lg px-5 md:mt-10 md:px-10">
 	<article class="content_wrap">
 		<section class="space-y-2.5">
-			<h3 class="text-2xl font-semibold text-gray-950">
-				Tentang Tes Kemampuan
-			</h3>
+			<h3>Tentang Tes Kemampuan</h3>
 
 			<p>
 				Layanan bahasa asing di UPA Bahasa Universitas Mataram menyelenggarakan
@@ -41,9 +37,7 @@
 		</section>
 
 		<section class="mt-5 space-y-5">
-			<h4 class="text-xl font-semibold text-gray-950">
-				1. Program Tes Kemampuan Bahasa Inggris
-			</h4>
+			<h4>1. Program Tes Kemampuan Bahasa Inggris</h4>
 
 			<div class="relative">
 				<img
@@ -87,9 +81,7 @@
 		</section>
 
 		<section class="mt-5 space-y-5">
-			<h4 class="text-xl font-semibold text-gray-950">
-				2. Program Tes Kemampuan Bahasa Mandarin
-			</h4>
+			<h4>2. Program Tes Kemampuan Bahasa Mandarin</h4>
 
 			<div class="relative">
 				<img
@@ -139,6 +131,6 @@
 			</p>
 		</section>
 	</article>
-</section>
+</div>
 
 <NavigationPages datas={data.nav_page} />
