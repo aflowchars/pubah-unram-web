@@ -1,40 +1,13 @@
 <script>
 	import { SeoHead } from '$lib/components/base';
+	import HeroPrograms from '../hero-programs.svelte';
+
+	export let data;
 </script>
 
 <SeoHead title="Pusat Pembelajaran Mandiri" />
 
-<div class="container mx-auto max-w-screen-2xl px-10">
-	<header class="relative h-[50vh] overflow-hidden">
-		<img
-			class="absolute inset-0 -z-10 h-full w-full object-cover object-top"
-			src="https://plus.unsplash.com/premium_photo-1661727502961-a69d64bea7c1?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-			alt="Language Test"
-		/>
-
-		<div
-			class="absolute inset-0 z-0 h-full w-full bg-gradient-to-t from-gray-950/80 to-gray-50/25"
-		/>
-
-		<div
-			class="relative z-10 flex h-full w-full flex-col justify-end p-10 text-white"
-		>
-			<nav class="flex w-3/4 flex-col items-start space-y-2.5">
-				<h1 class="text-4xl font-medium tracking-tighter">
-					Resource Centre & Self-Access Centre
-				</h1>
-
-				<p class="w-9/12 text-base leading-relaxed text-gray-300">
-					Resource Centre & Self Access Centre (RCSAC) adalah fasilitas yang
-					disediakan oleh lembaga pendidikan atau institusi tertentu untuk
-					memberikan akses mandiri kepada siswa atau peserta program dalam
-					memperoleh bahan bacaan, sumber daya belajar, dan teknologi untuk
-					mendukung pembelajaran mereka.
-				</p>
-			</nav>
-		</div>
-	</header>
-</div>
+<HeroPrograms data={data.hero} />
 
 <section
 	class="mx-auto mt-10 max-w-screen-lg space-y-10 px-10 text-justify text-lg leading-loose text-gray-600"

@@ -1,37 +1,14 @@
 <script>
+	import { SeoHead } from '$lib/components/base';
+	import HeroPrograms from '../hero-programs.svelte';
 	import * as Accordion from '$lib/components/ui/accordion';
 
-	import { SeoHead } from '$lib/components/base';
+	export let data;
 </script>
 
 <SeoHead title="Program Kursus" />
 
-<div class="w-full px-10">
-	<header
-		class="container relative mx-auto h-[50vh] max-w-screen-2xl overflow-hidden"
-	>
-		<div
-			class="absolute inset-0 z-10 h-full w-full bg-gradient-to-t from-gray-950/80 to-gray-50/15"
-		/>
-
-		<img
-			class="absolute inset-0 z-0 h-full w-full object-cover object-top"
-			src="https://images.unsplash.com/photo-1545104578-034bf8bfe03d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-			alt="test 123"
-		/>
-
-		<div
-			class="absolute z-20 flex h-full w-full flex-col items-start justify-end py-10 text-white"
-		>
-			<h1 class="text-4xl font-medium">Profil</h1>
-
-			<p class="mt-2 w-9/12 text-left text-lg text-gray-300">
-				Profil dari Pusat Bahasa yang merupakan salah satu institusi yang
-				mewadahi berbagai program bahasa.
-			</p>
-		</div>
-	</header>
-</div>
+<HeroPrograms data={data.hero} />
 
 <section
 	class="mx-auto mt-10 max-w-screen-lg px-10 text-justify text-lg leading-loose text-gray-600"
@@ -50,7 +27,7 @@
 
 	<Accordion.Root class="mt-5 w-full">
 		<Accordion.Item value="item-1">
-			<Accordion.Trigger class="text-xl font-semibold text-blue-900">
+			<Accordion.Trigger class="text-left text-xl font-semibold text-blue-900">
 				English for Children (EFC)
 			</Accordion.Trigger>
 
@@ -187,7 +164,7 @@
 		</Accordion.Item>
 
 		<Accordion.Item value="item-2">
-			<Accordion.Trigger class="text-xl font-semibold text-blue-900">
+			<Accordion.Trigger class="text-left text-xl font-semibold text-blue-900">
 				Kelas Reguler
 			</Accordion.Trigger>
 
@@ -436,7 +413,7 @@
 		</Accordion.Item>
 
 		<Accordion.Item value="item-3">
-			<Accordion.Trigger class="text-xl font-semibold text-blue-900">
+			<Accordion.Trigger class="text-left text-xl font-semibold text-blue-900">
 				Kelas Persiapan Tes Kemampuan Bahasa Inggris
 			</Accordion.Trigger>
 
@@ -763,7 +740,7 @@
 		</Accordion.Item>
 
 		<Accordion.Item value="item-4">
-			<Accordion.Trigger class="text-xl font-semibold text-blue-900">
+			<Accordion.Trigger class="text-left text-xl font-semibold text-blue-900">
 				Kelas/Kursus Bahasa Mandarin
 			</Accordion.Trigger>
 

@@ -1,22 +1,23 @@
 <script lang="ts">
+	//----------------------------------------------------------------//
 	import { fly } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
+	import { isMobileNav } from '$lib/stores';
 	import * as Accordion from '$lib/components/ui/accordion';
-
+	//----------------------------------------------------------------//
 	import {
 		NavArrowDownIconRegular,
 		XMarkIconRegular
 	} from '$lib/icons/iconoir';
-
+	//----------------------------------------------------------------//
 	export let datas: any;
-
-	import { isMobileNav } from '$lib/stores';
-
+	//----------------------------------------------------------------//
 	let showNav = false;
 
 	isMobileNav.subscribe((data) => {
 		showNav = data;
 	});
+	//----------------------------------------------------------------//
 </script>
 
 {#if showNav}
@@ -65,7 +66,7 @@
 		</nav>
 
 		<ul
-			class="mt-5 flex w-full flex-col items-center gap-2.5 overflow-y-auto px-5 md:gap-0 lg:mt-5"
+			class="mt-2.5 flex w-full flex-col items-center gap-2.5 overflow-y-auto px-5 md:mt-5 md:gap-0"
 		>
 			{#each datas as menu}
 				<li class="flex w-full flex-col items-start">
@@ -76,7 +77,7 @@
 									isMobileNav.set(false);
 								}, 500)}
 							href={menu.link}
-							class="w-full border-b border-gray-200 py-5 text-2xl font-medium tracking-tight md:px-5 md:py-5 md:text-3xl lg:py-5"
+							class="w-full border-b border-gray-200 py-5 text-xl font-medium tracking-tight md:px-5 md:py-5 md:text-3xl lg:py-5"
 						>
 							{menu.label}
 						</a>
@@ -85,9 +86,9 @@
 							<Accordion.Item value="item-1" class="w-full border-b-0">
 								<Accordion.Trigger
 									showIcon={false}
-									class="w-full border-b border-gray-200 py-5 text-2xl font-medium tracking-tight md:px-5 md:py-5 lg:py-5"
+									class="w-full border-b border-gray-200 py-5 font-medium tracking-tight md:px-5 md:py-5 lg:py-5"
 								>
-									<span class="text-2xl font-medium tracking-tight md:text-3xl">
+									<span class="text-xl font-medium tracking-tight md:text-3xl">
 										{menu.label}
 									</span>
 
@@ -107,7 +108,7 @@
 														isMobileNav.set(false);
 													}, 500)}
 												href={child.link}
-												class="py-2.5 text-lg text-gray-600 md:py-5 md:text-lg lg:py-2.5"
+												class="py-2.5 text-base text-gray-600 lg:text-lg"
 											>
 												{child.label}
 											</a>

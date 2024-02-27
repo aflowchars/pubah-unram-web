@@ -25,7 +25,7 @@
 		/>
 
 		<div
-			class="absolute left-0 top-0 z-20 flex h-full w-full flex-col items-start justify-end p-5 py-6 text-white md:py-8 lg:py-10 xl:p-10"
+			class="absolute left-0 top-0 z-20 flex h-full w-full flex-col items-start justify-end p-5 py-8 text-white lg:py-10 xl:p-10"
 		>
 			<h1 class="text-xl font-medium md:text-2xl xl:text-3xl">
 				{data.title || 'Ini Judul'}
