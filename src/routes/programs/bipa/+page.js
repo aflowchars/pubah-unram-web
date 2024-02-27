@@ -8,6 +8,16 @@ export function load() {
 			title: 'Bahasa Indonesia bagi Penutur Asing (BIPA)',
 			description: `Proses pembelajaran dan
             penggunaan bahasa resmi Republik Indonesia oleh individu yang bukan asli penuturnya.`
-		}
+		},
+		nav_page: {
+            left: {
+                link: '/programs/resource-centre-&-self-access-centre',
+                label: 'BIPA'
+            },
+            right: {
+                link: '/programs/course',
+                label: 'Course'
+            }
+        }
 	};
 }

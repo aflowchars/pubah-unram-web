@@ -2,6 +2,7 @@
 	import { SeoHead } from '$lib/components/base';
 	import HeroPrograms from '../hero-programs.svelte';
 	import * as Accordion from '$lib/components/ui/accordion';
+	import NavigationPages from '../navigation-pages.svelte';
 
 	export let data;
 </script>
@@ -11,7 +12,7 @@
 <HeroPrograms data={data.hero} />
 
 <section
-	class="mx-auto mt-10 max-w-screen-lg px-10 text-justify text-lg leading-loose text-gray-600"
+	class="mx-auto mt-10 max-w-screen-lg px-5 text-left text-lg leading-loose text-gray-600 md:px-10"
 >
 	<h3 class="text-2xl font-semibold text-gray-950">Kursus Bahasa Asing</h3>
 
@@ -800,4 +801,4 @@
 	</Accordion.Root>
 </section>
 
-<section class="mt-24"></section>
+<NavigationPages datas={data.nav_page} />

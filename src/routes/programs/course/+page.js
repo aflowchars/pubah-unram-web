@@ -7,6 +7,16 @@ export function load() {
 			alt: 'Program Kursus UPA Pusat Bahasa Universtas Mataram',
 			title: 'Program Kursus',
 			description: `Berikut adalah beberapa program kursus yang disediakan oleh UPA Pusat Bahasa Universitas Mataram`
-		}
+		},
+		nav_page: {
+            left: {
+                link: '/programs/bipa',
+                label: 'BIPA'
+            },
+            right: {
+                link: '/programs/language-test',
+                label: 'Language Test'
+            }
+        }
 	};
 }

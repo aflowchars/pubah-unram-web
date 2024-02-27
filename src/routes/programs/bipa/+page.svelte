@@ -1,6 +1,7 @@
 <script>
 	import { SeoHead } from '$lib/components/base';
 	import HeroPrograms from '../hero-programs.svelte';
+	import NavigationPages from '../navigation-pages.svelte';
 
 	export let data;
 </script>
@@ -9,11 +10,9 @@
 
 <HeroPrograms data={data.hero} />
 
-<section
-	class="mx-auto mt-10 max-w-screen-lg space-y-10 px-10 text-justify text-lg leading-loose text-gray-600"
->
-	<section class="space-y-2.5">
-		<h3 class="text-2xl font-semibold text-gray-950">Tentang BIPA</h3>
+<section class="container mx-auto mt-8 max-w-screen-lg px-5 md:mt-10 md:px-10">
+	<article class="content_wrap">
+		<h3>Tentang BIPA</h3>
 
 		<p>
 			Pengajaran Bahasa Indonesia bagi penutur Internasional atau pengajaran
@@ -51,11 +50,9 @@
 			Menulis), Seni dan Budaya Indonesia, dan Sistem Pendidikan di Indonesia.
 		</p>
 
-		<p class="font-medium">
-			Target capaian pada program BIPA di UPA Bahasa adalah:
-		</p>
+		<h4>Target capaian pada program BIPA di UPA Bahasa adalah:</h4>
 
-		<ol class="list-decimal pl-5">
+		<ul>
 			<li>
 				Mahasiswa program BIPA memiliki keterampilan berbahasa Indonesia
 				(Mendengar, Berbicara, Membaca, dan Menulis),
@@ -79,15 +76,15 @@
 				Mahasiswa program BIPA berpartisipasi aktif dalam kegiatan pendidikan di
 				Indonesia.
 			</li>
-		</ol>
+		</ul>
 
-		<p class="font-medium">
+		<h4>
 			Dalam merealisasikan program pembelajaran, BIPA, UPA Bahasa Universitas
 			Mataram menawarkan enam tingkatan yaitu, dimana kompetensi yang dicapai
 			pada setiap level program BIPA UPA Bahasa adalah sebagai berikut:
-		</p>
+		</h4>
 
-		<ol class="list-decimal pl-5">
+		<ul>
 			<li>
 				Tingkat 1: Mahasiswa BIPA mampu menggunakan bahasa Indonesia untuk
 				komunikasi sehari-hari di berbagai konteks sosial yang berbeda-beda baik
@@ -127,13 +124,13 @@
 				dan profesional, dapat memahami teks dengan mudah, dan mampu merangkum
 				informasi dari sumber lisan dan tulis.
 			</li>
-		</ol>
+		</ul>
 
-		<p class="font-medium">Rincian Pembelajaran BIPA</p>
+		<h4>Rincian Pembelajaran BIPA</h4>
 
-		<p class="font-medium">Tingkat 1 dan 2:</p>
+		<h4>Tingkat 1 dan 2:</h4>
 
-		<ol class="list-disc pl-5">
+		<ol>
 			<li>
 				Menyimak ragam percakapan formal dan informal sesuai dengan situasinya,
 				misalnya, memperkenalkan diri, memperkenalkan orang lain, dan menanyakan
@@ -164,9 +161,9 @@
 			</li>
 		</ol>
 
-		<p class="font-medium">Tingkat 3 dan 4:</p>
+		<h4>Tingkat 3 dan 4:</h4>
 
-		<ol class="list-disc pl-5">
+		<ol>
 			<li>
 				Menyimak teks seperti, Ulasan TVRI, RRI, wawancara, pengajaran, ceramah
 				TV, dan radio, kemudian diceritakan kembali.
@@ -192,9 +189,9 @@
 			<li>Memahami sistem negara pemerintahan dan warga negara Indonesia.</li>
 		</ol>
 
-		<p class="font-medium">Tingkat 5 dan 6:</p>
+		<h4>Tingkat 5 dan 6:</h4>
 
-		<ol class="list-disc pl-5">
+		<ol>
 			<li>
 				Menyimak teks argumentatif, seperti, Ulasan TVRI, RRI, wawancara,
 				pengajaran, ceramah TV, dan radio, kemudian diceritakan kembali.
@@ -226,9 +223,9 @@
 			</li>
 		</ol>
 
-		<p class="font-medium">Kegiatan Program BIPA</p>
+		<h4>Kegiatan Program BIPA</h4>
 
-		<ol class="list-decimal pl-5">
+		<ol>
 			<li>Aktivitas di dalam Kelas</li>
 
 			<p>
@@ -277,24 +274,7 @@
 				secara lisan maupun tulisan saat pembelajaran.
 			</p>
 		</ol>
-	</section>
+	</article>
 </section>
 
-<nav class="mt-20 flex items-center justify-between bg-blue-50 px-32 py-5">
-	<a href="/programs/course" class="flex flex-col items-start">
-		<h6 class="text-xs font-semibold text-gray-500">Sebelumnya</h6>
-
-		<p class="text-lg font-semibold text-gray-950">Course</p>
-	</a>
-
-	<a
-		href="/programs/translation-&-interpreting"
-		class="flex flex-col items-end"
-	>
-		<h6 class="text-xs font-semibold text-gray-500">Selanjutnya</h6>
-
-		<p class="text-lg font-semibold text-gray-950">
-			Translation & Interpreting
-		</p>
-	</a>
-</nav>
+<NavigationPages datas={data.nav_page} />

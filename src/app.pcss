@@ -79,3 +79,25 @@
 		@apply bg-background text-gray-950;
 	}
 }
+
+@layer components {
+		article.content_wrap {
+		@apply text-left text-base leading-loose text-gray-600 md:text-lg;
+	}
+
+	article.content_wrap > h3 {
+		@apply mb-1 text-xl font-semibold text-gray-950 md:text-2xl;
+	}
+
+	article.content_wrap > h4 {
+		@apply my-1 font-medium;
+	}
+
+	article.content_wrap > ol {
+		@apply list-inside list-disc;
+	}
+
+	article.content_wrap > ul {
+		@apply list-inside list-decimal;
+	}
+}

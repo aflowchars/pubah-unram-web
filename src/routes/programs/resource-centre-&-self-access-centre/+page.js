@@ -7,6 +7,16 @@ export function load() {
 			alt: 'Resource Centre & Self-Access Centre',
 			title: 'Resource Centre & Self-Access Centre',
 			description: `Akses mandiri kepada peserta program dalam memperoleh bahan bacaan, sumber daya belajar, dan teknologi untuk mendukung pembelajaran mereka.`
+		},
+		nav_page: {
+			left: {
+				link: '/programs/translation-&-interpreting',
+				label: 'Translation & Interpreting'
+			},
+			right: {
+				link: '/programs/bipa',
+				label: 'BIPA'
+			}
 		}
 	};
 }

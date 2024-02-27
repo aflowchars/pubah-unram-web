@@ -1,7 +1,7 @@
 <script>
 	import { SeoHead } from '$lib/components/base';
 	import HeroPrograms from '../hero-programs.svelte';
-
+	import NavigationPages from '../navigation-pages.svelte';
 	export let data;
 </script>
 
@@ -194,21 +194,4 @@
 	</section>
 </section>
 
-<nav class="mt-20 flex items-center justify-between bg-blue-50 px-32 py-5">
-	<a href="/programs/language-test" class="flex flex-col items-start">
-		<h6 class="text-xs font-semibold text-gray-500">Sebelumnya</h6>
-
-		<p class="text-lg font-semibold text-gray-950">Language Test</p>
-	</a>
-
-	<a
-		href="/programs/translation-&-interpreting"
-		class="flex flex-col items-end"
-	>
-		<h6 class="text-xs font-semibold text-gray-500">Selanjutnya</h6>
-
-		<p class="text-lg font-semibold text-gray-950">
-			Resource Centre & Self-Access Centre
-		</p>
-	</a>
-</nav>
+<NavigationPages datas={data.nav_page} />
