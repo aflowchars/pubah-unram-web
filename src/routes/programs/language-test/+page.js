@@ -8,5 +8,15 @@ export function load() {
             title: 'Tes Kemampuan Bahasa Asing',
             description: `Tes Kemampuan Bahasa Asing adalah tes yang dilakukan oleh Unram untuk mengetahui kemampuan bahasa asing.`
         },
+        nav_page: {
+            left: {
+                link: '/programs/course',
+                label: 'Course'
+            },
+            right: {
+                link: '/programs/translation-&-interpreting',
+                label: 'Translation & Interpreting'
+            }
+        }
     }
 }
