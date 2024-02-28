@@ -1,62 +1,45 @@
 <script>
 	import * as Accordion from '$lib/components/ui/accordion';
 
-	import { SeoHead } from '$lib/components/base';
+	import { Heroes, SeoHead } from '$lib/components/base';
+
+	export let data;
 </script>
 
 <SeoHead title="Profile" />
 
-<header
-	class="container relative h-[50vh] max-w-screen-2xl overflow-hidden px-10"
->
-	<div
-		class="absolute inset-0 z-10 h-full w-full bg-gradient-to-t from-gray-950/80 to-gray-50/15"
-	/>
+<Heroes data={data.hero} />
 
-	<img
-		class="absolute inset-0 z-0 h-full w-full object-cover"
-		src="https://images.unsplash.com/photo-1447069387593-a5de0862481e?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-		alt="test 123"
-	/>
+<div class="container mx-auto mt-8 max-w-screen-lg px-5 md:mt-10 md:px-10">
+	<article class="content_wrap">
+		<section>
+			<h3 class="text-2xl font-semibold text-blue-900">Sejarah</h3>
 
-	<div
-		class="relative z-20 flex h-full flex-col items-start justify-end py-10 text-white"
-	>
-		<h1 class="text-4xl font-medium">Profil</h1>
+			<div class="mt-2.5 space-y-5 text-lg leading-relaxed text-gray-600">
+				<p>
+					Pertama kali didirikan sebagai Laboratorium Bahasa Universitas Mataram
+					pada tahun 1975, dua belas tahun setelah berdirinya Universitas
+					Mataram dengan Drs. Abdul Karim Sahidu sebagai orang yang pertama
+					mendapat tugas sebagai ketua. Pada tahun 1992 jabatan ketua diserahkan
+					kepada Drs. M. Husni Mu’adz, M.A., Ph.D. Pada era kepemimpinan kedua
+					ini, Laboratorium Bahasa berubah menjadi Pusat Studi Bahasa dan
+					Kebudayaan (PSBK). Sejak itu, kegiatan yang dilaksanakan tidak semata
+					memberikan pelayanan bahasa teratpi juga mulai berkembang pada
+					penelitian bidang kebahasaan, pengajaran dan kebudayaan.
+				</p>
 
-		<p class="mt-2 w-9/12 text-left text-lg text-gray-300">
-			Profil dari Pusat Bahasa yang merupakan salah satu institusi yang mewadahi
-			berbagai program bahasa.
-		</p>
-	</div>
-</header>
+				<p>
+					Untuk menunjang upaya peningkatan mutu sumber daya manusia (SDM)
+					khususnya lulusan yang dihasilkannya, Universitas Mataram telah
+					berinisiatif untuk meningkatkan fungsi dan peranan Laboratorium Bahasa
+					khususnya dalam program pelayanan bahasa.
+				</p>
+			</div>
+		</section>
+	</article>
+</div>
 
-<section class="mx-auto mt-10 max-w-screen-lg px-10">
-	<h3 class="text-2xl font-semibold text-blue-900">Sejarah</h3>
-
-	<div class="mt-2.5 space-y-5 text-lg leading-relaxed text-gray-600">
-		<p>
-			Pertama kali didirikan sebagai Laboratorium Bahasa Universitas Mataram
-			pada tahun 1975, dua belas tahun setelah berdirinya Universitas Mataram
-			dengan Drs. Abdul Karim Sahidu sebagai orang yang pertama mendapat tugas
-			sebagai ketua. Pada tahun 1992 jabatan ketua diserahkan kepada Drs. M.
-			Husni Mu’adz, M.A., Ph.D. Pada era kepemimpinan kedua ini, Laboratorium
-			Bahasa berubah menjadi Pusat Studi Bahasa dan Kebudayaan (PSBK). Sejak
-			itu, kegiatan yang dilaksanakan tidak semata memberikan pelayanan bahasa
-			teratpi juga mulai berkembang pada penelitian bidang kebahasaan,
-			pengajaran dan kebudayaan.
-		</p>
-
-		<p>
-			Untuk menunjang upaya peningkatan mutu sumber daya manusia (SDM) khususnya
-			lulusan yang dihasilkannya, Universitas Mataram telah berinisiatif untuk
-			meningkatkan fungsi dan peranan Laboratorium Bahasa khususnya dalam
-			program pelayanan bahasa.
-		</p>
-	</div>
-</section>
-
-<section class="mx-auto mt-5 max-w-screen-lg px-10">
+<div class="container mx-auto mt-5 max-w-screen-lg px-5 md:mt-5 md:px-10">
 	<Accordion.Root class="w-full">
 		<Accordion.Item value="item-1">
 			<Accordion.Trigger class="text-xl font-semibold text-blue-900">
@@ -167,6 +150,4 @@
 			</Accordion.Content>
 		</Accordion.Item>
 	</Accordion.Root>
-</section>
-
-<section class="mt-20"></section>
+</div>

@@ -8,7 +8,11 @@
 
 <Navbar datas={data.navbar} />
 
-<main class={$page.url.href.includes('/programs') ? 'mb-0 mt-20' : 'my-20'}>
+<main
+	class={$page.url.href.includes('/programs')
+		? 'mb-0 mt-20'
+		: 'mb-10 mt-20 md:my-20'}
+>
 	<slot />
 </main>
 
