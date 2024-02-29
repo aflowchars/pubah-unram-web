@@ -5,7 +5,7 @@
 	export let data: any;
 </script>
 
-<header class="container relative w-full max-w-screen-2xl px-0 md:px-10">
+<header class="container relative w-full max-w-screen-xl px-0 md:px-10">
 	<Carousel.Root
 		opts={{
 			loop: true

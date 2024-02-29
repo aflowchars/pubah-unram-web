@@ -4,9 +4,9 @@
 
 <SeoHead title="Galeri" />
 
-<div class="min-h-screen pt-5 xl:pt-10">
+<div class="min-h-screen pt-5 xl:pt-20">
 	<div
-		class="container mx-auto min-h-screen max-w-screen-2xl space-y-2.5 px-5 md:px-10 xl:space-y-5"
+		class="container mx-auto min-h-screen max-w-screen-xl space-y-2.5 px-5 md:px-10 xl:space-y-5"
 	>
 		<div
 			class="grid grid-cols-1 gap-2.5 overflow-hidden md:h-[16rem] md:grid-cols-12 xl:h-[32rem] xl:gap-5"

@@ -12,7 +12,7 @@
 
 <div class="relative w-full px-0 md:px-10">
 	<header
-		class="container relative mx-auto h-[50vh] max-w-screen-2xl overflow-hidden"
+		class="container relative mx-auto h-[50vh] max-w-screen-xl overflow-hidden"
 	>
 		<div
 			class="absolute inset-0 z-10 h-full w-full bg-gradient-to-t from-gray-950/80 to-gray-50/15"
