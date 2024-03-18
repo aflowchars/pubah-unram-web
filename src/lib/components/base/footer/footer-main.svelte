@@ -6,7 +6,7 @@
 </script>
 
 <footer class="bg-blue-950 pt-10 text-white">
-	<div class="container relative max-w-screen-2xl px-5 md:px-10">
+	<div class="container relative max-w-screen-xl px-5 md:px-16">
 		<FooterLogoSocmed logo={datas?.logo} socmeds={datas?.social_media} />
 
 		<FooterContact

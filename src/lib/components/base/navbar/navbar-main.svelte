@@ -2,7 +2,7 @@
 	//---------------------------------------------------------//
 	import { page } from '$app/stores';
 	import * as Menubar from '$lib/components/ui/menubar';
-	import { isMobileNav } from '$lib/stores';
+	import { currentLang, isMobileNav } from '$lib/stores';
 	//---------------------------------------------------------//
 	import {
 		MenuScaleIconRegular,
@@ -16,7 +16,7 @@
 
 <!-- Main bar -->
 <section
-	class="flex h-full w-full flex-1 items-center justify-between border-b border-gray-200/50 bg-gray-50 px-5 py-3 md:px-10"
+	class="flex h-full w-full flex-1 items-center justify-between border-b border-slate-200/50 bg-slate-50 px-5 py-3 md:px-16"
 >
 	<!-- Logo -->
 	<div class="flex items-center xl:basis-1/3">
@@ -42,7 +42,7 @@
 			{#if data.type === 'link'}
 				<a
 					href={data.link}
-					class="px-3 py-1.5 text-sm hover:underline focus:bg-accent focus:text-accent-foreground {$page.url.href.includes(
+					class="relative rounded-lg px-3 py-2.5 text-sm transition-all duration-300 ease-in-out hover:bg-slate-100 focus:bg-accent focus:text-accent-foreground {$page.url.href.includes(
 						data.link
 					)
 						? 'rounded-sm bg-accent font-semibold text-blue-800'
@@ -58,7 +58,7 @@
 								'/programs'
 							)
 								? 'bg-accent'
-								: 'bg-gray-50'} px-3 py-1.5 text-sm font-medium shadow-none hover:underline"
+								: 'bg-slate-50'} rounded-lg px-3 py-2.5 text-sm font-medium shadow-none transition-all duration-300 ease-in-out hover:bg-slate-100"
 						>
 							<span
 								class={$page.url.href.includes('/programs')
@@ -73,7 +73,7 @@
 									'/programs'
 								)
 									? 'rounded-sm bg-accent font-semibold text-blue-800'
-									: 'font-normal text-gray-950'}"
+									: 'font-normal text-slate-950'}"
 							/>
 						</Menubar.Trigger>
 
@@ -103,12 +103,12 @@
 	<div class="flex items-center justify-end gap-2 xl:basis-1/3">
 		<div class="relative hidden w-48 lg:block">
 			<SearchIconRegular
-				class="pointer-events-none absolute right-4 top-0 h-full w-4 stroke-2 text-gray-500"
+				class="pointer-events-none absolute right-4 top-0 h-full w-4 stroke-2 text-slate-500"
 			/>
 
 			<input
 				type="text"
-				class="w-full rounded-full border bg-gray-100 px-4 py-2 text-xs outline-0 transition-all duration-300 ease-in-out focus:bg-gray-50"
+				class="w-full rounded-full border bg-slate-100 px-4 py-2 text-xs outline-0 transition-all duration-300 ease-in-out focus:bg-slate-50"
 				placeholder="Pencarian"
 			/>
 		</div>
@@ -116,27 +116,69 @@
 		<Menubar.Root class="hidden md:block">
 			<Menubar.Menu>
 				<Menubar.Trigger
-					class="relative flex cursor-pointer items-center gap-2 py-2"
+					class="relative flex cursor-pointer items-center gap-2 rounded-lg	 py-2"
 				>
-					<span class="pointer-events-none text-sm font-semibold"> ID </span>
+					<span class="pointer-events-none text-sm font-semibold">
+						{$currentLang === 'id' ? 'ID' : 'EN'}
+					</span>
 
 					<div
-						class="pointer-events-none relative h-6 w-6 overflow-hidden rounded-full border border-gray-300"
+						class="pointer-events-none relative h-6 w-6 overflow-hidden rounded-full border border-slate-300"
 					>
 						<img
 							class="h-full w-full object-cover"
-							src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Flag_of_Indonesia.png/800px-Flag_of_Indonesia.png"
+							src={$currentLang === 'id'
+								? 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Flag_of_Indonesia.png/800px-Flag_of_Indonesia.png'
+								: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Flag_of_the_United_Kingdom.png/320px-Flag_of_the_United_Kingdom.png'}
 							alt="Indonesia Flag"
 						/>
 					</div>
 
 					<NavArrowDownIconRegular
-						class="pointer-events-none h-4 w-4 stroke-2 text-gray-950"
+						class="pointer-events-none h-4 w-4 stroke-2 text-slate-950"
 					/>
 				</Menubar.Trigger>
 
 				<Menubar.Content class="mt-3.5">
-					<Menubar.Item class="font-medium">Available Soon!</Menubar.Item>
+					<Menubar.Item
+						on:click={() => {
+							currentLang.set('id');
+						}}
+						class="flex cursor-pointer items-center gap-1.5 font-medium"
+					>
+						<div
+							class="pointer-events-none relative h-6 w-6 overflow-hidden rounded-full border border-slate-300"
+						>
+							<img
+								class="h-full w-full object-cover"
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Flag_of_Indonesia.png/800px-Flag_of_Indonesia.png"
+								alt="Indonesia Flag"
+							/>
+						</div>
+
+						<span> Indonesia (ID) </span>
+					</Menubar.Item>
+
+					<Menubar.Separator />
+
+					<Menubar.Item
+						on:click={() => {
+							currentLang.set('en');
+						}}
+						class="flex cursor-pointer items-center gap-1.5 font-medium"
+					>
+						<div
+							class="pointer-events-none relative h-6 w-6 overflow-hidden rounded-full border border-slate-300"
+						>
+							<img
+								class="h-full w-full object-cover"
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Flag_of_the_United_Kingdom.png/320px-Flag_of_the_United_Kingdom.png"
+								alt="United Kingdom Flag"
+							/>
+						</div>
+
+						<span> English (EN) </span>
+					</Menubar.Item>
 				</Menubar.Content>
 			</Menubar.Menu>
 		</Menubar.Root>
@@ -147,7 +189,7 @@
 			class="flex flex-nowrap items-center gap-2 p-1 xl:hidden"
 		>
 			<MenuScaleIconRegular
-				class="h-6 w-6 stroke-2 text-gray-950 md:h-5 md:w-5"
+				class="h-6 w-6 stroke-2 text-slate-950 md:h-5 md:w-5"
 			/>
 
 			<span class="hidden text-sm font-medium md:block">Menu</span>

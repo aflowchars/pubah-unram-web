@@ -1,93 +1,72 @@
-<section
-	class="container mx-auto mt-8 max-w-screen-2xl px-5 md:mt-16 md:px-10 xl:mt-20"
->
-	<h3 class="text-xl font-semibold md:text-2xl">Partner Kami</h3>
+<script lang="ts">
+	import Autoplay from 'embla-carousel-autoplay';
+	import { PUBLIC_STRAPI_BASE } from '$env/static/public';
+	import * as Carousel from '$lib/components/ui/carousel/index';
+	import { NavArrowRightIconRegular } from '$lib/icons/iconoir';
+
+	export let data: any;
+</script>
+
+<section class="container mx-auto mt-8 max-w-screen-xl px-5 md:mt-16 md:px-16">
+	<nav class="flex items-center justify-between gap-5">
+		<h3 class="text-xl font-semibold md:text-2xl">Partner Kami</h3>
+
+		<a
+			href="/partnership"
+			class="relative flex scale-100 items-center gap-1 rounded-full bg-amber-300 px-3 py-1.5 text-xs font-bold text-slate-950 shadow-xs transition-all duration-300 ease-in-out hover:bg-amber-400 focus:scale-95"
+		>
+			<span class=""> Lihat semua </span>
+
+			<NavArrowRightIconRegular class="h-4 w-4 stroke-2 text-slate-950" />
+		</a>
+	</nav>
 
 	<div
 		id="partner__kami--logo"
-		class="relative mt-8 flex flex-row flex-nowrap items-center justify-between gap-10 overflow-x-auto px-5 md:px-0 xl:mt-10"
+		class="relative mt-6 flex w-full flex-row flex-nowrap items-center justify-between gap-10 overflow-x-auto rounded-lg xl:mt-8"
 	>
-		<div
-			class="relative h-20 flex-shrink-0 transition-all duration-300 ease-in-out xl:w-20 2xl:h-28 2xl:w-28"
+		<Carousel.Root
+			opts={{
+				align: 'start'
+			}}
+			plugins={[
+				Autoplay({
+					delay: 3000
+				})
+			]}
+			class="w-full"
 		>
-			<img
-				class="h-full w-full object-contain"
-				src="https://upload.wikimedia.org/wikipedia/commons/3/36/Lambang_Kabupaten_Lombok_Timur.jpeg"
-				alt="Lombok Timur Logo"
-			/>
-		</div>
+			<Carousel.Content class="-ml-0 w-full">
+				{#each data as carousel}
+					<Carousel.Item
+						class="w-full basis-full pl-0 sm:basis-1/2 md:pl-5 xl:basis-1/3"
+					>
+						<figure
+							class="flex w-full items-center rounded-lg bg-slate-50 p-3.5"
+						>
+							<div
+								class="relative h-16 w-16 flex-shrink-0 transition-all duration-300 ease-in-out"
+							>
+								<img
+									class="h-full w-full object-contain"
+									src={`${PUBLIC_STRAPI_BASE}${carousel?.image?.data?.attributes?.url}`}
+									alt={carousel?.image?.data?.attributes?.alternativeText}
+								/>
+							</div>
 
-		<div
-			class="relative h-20 flex-shrink-0 transition-all duration-300 ease-in-out xl:w-20 2xl:h-28 2xl:w-28"
-		>
-			<img
-				class="h-full w-full object-contain"
-				src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Lambang_Kabupaten_Lombok_Tengah.gif"
-				alt="Lombok Tengah Logo"
-			/>
-		</div>
+							<div class="ml-2.5">
+								<h5 class="w-full text-sm font-semibold leading-tight">
+									{carousel?.title}
+								</h5>
 
-		<div
-			class="relative h-20 flex-shrink-0 transition-all duration-300 ease-in-out xl:w-20 2xl:h-28 2xl:w-28"
-		>
-			<img
-				class="h-full w-full object-contain"
-				src="/assets/general/stikes-yarsi-logo.png"
-				alt="Stikes Yarsi Logo"
-			/>
-		</div>
-
-		<div
-			class="relative h-20 flex-shrink-0 transition-all duration-300 ease-in-out xl:w-20 2xl:h-28 2xl:w-28"
-		>
-			<img
-				class="h-full w-full object-contain"
-				src="/assets/general/bappeda-ntb-logo.png"
-				alt="BAPPEDA NTB Logo"
-			/>
-		</div>
-
-		<div
-			class="relative h-20 flex-shrink-0 transition-all duration-300 ease-in-out xl:w-20 2xl:h-28 2xl:w-28"
-		>
-			<img
-				class="h-full w-full object-contain"
-				src="/assets/general/sekolah-kristen-aletheia.png"
-				alt="Sekolah Kristen Alethia Logo"
-			/>
-		</div>
-
-		<div
-			class="relative h-20 flex-shrink-0 transition-all duration-300 ease-in-out xl:w-20 2xl:h-28 2xl:w-28"
-		>
-			<img
-				class="h-full w-full object-contain"
-				src="/assets/general/smp-2-mataram-logo.png"
-				alt="SMP 2 Mataram Logo"
-			/>
-		</div>
-
-		<div
-			class="relative h-20 flex-shrink-0 transition-all duration-300 ease-in-out xl:w-20 2xl:h-28 2xl:w-28"
-		>
-			<img
-				class="h-full w-full object-contain"
-				src="https://bptpntb-ppid.pertanian.go.id/assets/images/portal/logo.png"
-				alt="BPTP NTB Logo"
-			/>
-		</div>
+								<p class="mt-1 text-sm text-slate-500">
+									{carousel?.description}
+								</p>
+							</div>
+						</figure>
+					</Carousel.Item>
+				{/each}
+			</Carousel.Content>
+		</Carousel.Root>
 	</div>
 </section>
-
-<style>
-	/* Hide scrollbar for Chrome, Safari and Opera */
-	#partner__kami--logo::-webkit-scrollbar {
-		display: none;
-	}
-
-	/* Hide scrollbar for IE, Edge and Firefox */
-	#partner__kami--logo {
-		-ms-overflow-style: none; /* IE and Edge */
-		scrollbar-width: none; /* Firefox */
-	}
-</style>

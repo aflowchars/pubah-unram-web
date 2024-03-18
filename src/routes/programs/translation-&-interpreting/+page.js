@@ -1,22 +1,29 @@
+import { PUBLIC_STRAPI_API, PUBLIC_STRAPI_BASE } from '$env/static/public';
+
 /** @type {import('./$types').PageLoad} */
-export function load() {
-	return {
+export async function load({ fetch }) {
+	const response = await fetch(
+		`${PUBLIC_STRAPI_API}/program-translation-and-interpreting?populate[0]=hero&populate[1]=hero.thumbnail&populate[2]=nav_page&populate[3]=nav_page.prev&populate[4]=nav_page.next`
+	);
+	const data = await response.json();
+
+	const datas = data.data.attributes;
+
+	console.log(datas);
+
+	const programs = {
 		hero: {
-            id: 1,
-            src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-            alt: 'Language Test',
-            title: 'Layanan Terjemahan dan Interpretasi Bahasa',
-            description: `Layanan Terjemahan dan Interpretasi Bahasa menyediakan pengubahan teks dan pemahaman lisan dari satu bahasa ke bahasa lain, memfasilitasi komunikasi lintas bahasa dalam berbagai konteks.`
-        },
-        nav_page: {
-            left: {
-                link: '/programs/language-test',
-                label: 'Language Test'
-            },
-            right: {
-                link: '/programs/resource-centre-&-self-access-centre',
-                label: 'Resource Centre & Self-Access Centre'
-            }
-        }
-    }
+			id: datas?.hero?.id,
+			src: `${PUBLIC_STRAPI_BASE}${datas?.hero?.thumbnail?.data?.attributes?.url}`,
+			alt: datas?.hero?.thumbnail?.data?.attributes?.alternativeText,
+			title: datas?.hero?.title,
+			description: datas?.hero?.description
+		},
+		content: datas?.content,
+		nav_page: datas?.nav_page
+	};
+
+	return {
+		programs
+	};
 }

@@ -1,15 +1,30 @@
+<script>
+	import { NavArrowRightIconRegular } from '$lib/icons/iconoir';
+</script>
+
 <section
-	class="container mx-auto mt-16 max-w-screen-2xl px-5 md:mt-20 md:px-10 xl:mt-24 2xl:mt-32"
+	class="container mx-auto mt-12 max-w-screen-xl px-5 md:mt-20 md:px-16 xl:mt-20"
 >
-	<h3 class="text-xl font-semibold md:text-2xl">Our Programs</h3>
+	<nav class="flex items-center justify-between gap-5">
+		<h3 class="text-xl font-semibold md:text-2xl">Program Kami</h3>
+
+		<a
+			href="/partnership"
+			class="relative flex scale-100 items-center gap-1 rounded-full bg-amber-300 px-3 py-1.5 text-xs font-bold text-slate-950 shadow-xs transition-all duration-300 ease-in-out hover:bg-amber-400 focus:scale-95"
+		>
+			<span class=""> Lihat semua </span>
+
+			<NavArrowRightIconRegular class="h-4 w-4 stroke-2 text-slate-950" />
+		</a>
+	</nav>
 
 	<div class="mt-5 grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
 		<a
 			href="/programs/language-test"
-			class="group relative flex flex-col items-start gap-2.5 border border-transparent bg-gray-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 md:gap-5 2xl:flex-row"
+			class="group relative flex flex-col items-start gap-2.5 rounded-lg border border-transparent bg-slate-50 p-5 shadow-none transition-all duration-300 ease-in-out hover:border-blue-950 hover:shadow-inner md:gap-5"
 		>
 			<svg
-				class="absolute right-4 top-4 h-5 w-5 text-gray-950 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100"
+				class="absolute right-4 top-4 h-5 w-5 text-slate-950 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100"
 				xmlns="http://www.w3.org/2000/svg"
 				fill="currentColor"
 				viewBox="0 0 256 256"
@@ -20,7 +35,7 @@
 			</svg>
 
 			<svg
-				class="h-12 w-12"
+				class="h-10 w-10"
 				viewBox="0 0 32 32"
 				fill="none"
 				stroke="currentColor"
@@ -43,7 +58,7 @@
 			<div class="flex-1 space-y-1">
 				<h5 class="text-lg font-semibold">Language Test</h5>
 
-				<p class="w-full text-sm leading-relaxed text-gray-600">
+				<p class="w-full text-sm leading-relaxed text-slate-600">
 					Pengetesan kemampuan bahasa Inggris dengan format TOEFL dan IELTS
 				</p>
 			</div>
@@ -51,10 +66,10 @@
 
 		<a
 			href="/programs/translation-&-interpreting"
-			class="group relative flex flex-col items-start gap-2.5 border border-transparent bg-gray-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 md:gap-5 2xl:flex-row"
+			class="group relative flex flex-col items-start gap-2.5 rounded-lg border border-transparent bg-slate-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 md:gap-5"
 		>
 			<svg
-				class="absolute right-4 top-4 h-5 w-5 text-gray-950 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100"
+				class="absolute right-4 top-4 h-5 w-5 text-slate-950 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100"
 				xmlns="http://www.w3.org/2000/svg"
 				fill="currentColor"
 				viewBox="0 0 256 256"
@@ -65,7 +80,7 @@
 			</svg>
 
 			<svg
-				class="h-12 w-12"
+				class="h-10 w-10"
 				stroke="currentColor"
 				viewBox="0 0 32 32"
 				fill="none"
@@ -84,7 +99,7 @@
 			<div class="flex-1 space-y-1">
 				<h5 class="text-lg font-semibold">Translation & Interpreting</h5>
 
-				<p class="w-full text-sm leading-relaxed text-gray-600">
+				<p class="w-full text-sm leading-relaxed text-slate-600">
 					Layanan penerjemahan Bahasa Inggris ke Indonesia atau sebaliknya
 				</p>
 			</div>
@@ -92,10 +107,10 @@
 
 		<a
 			href="/programs/resource-centre-&-self-access-centre"
-			class="group relative flex flex-col items-start gap-2.5 border border-transparent bg-gray-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 md:gap-5 2xl:flex-row"
+			class="group relative flex flex-col items-start gap-2.5 rounded-lg border border-transparent bg-slate-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 md:gap-5"
 		>
 			<svg
-				class="absolute right-4 top-4 h-5 w-5 text-gray-950 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100"
+				class="absolute right-4 top-4 h-5 w-5 text-slate-950 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100"
 				xmlns="http://www.w3.org/2000/svg"
 				fill="currentColor"
 				viewBox="0 0 256 256"
@@ -106,7 +121,7 @@
 			</svg>
 
 			<svg
-				class="h-12 w-12"
+				class="h-10 w-10"
 				stroke="currentColor"
 				viewBox="0 0 32 32"
 				fill="none"
@@ -126,7 +141,7 @@
 			<div class="flex-1 space-y-1">
 				<h5 class="text-lg font-semibold">Resource & Self-Access Centre</h5>
 
-				<p class="w-full text-sm leading-relaxed text-gray-600">
+				<p class="w-full text-sm leading-relaxed text-slate-600">
 					Support koleksi tape pengajaran dan sistem belajar mandiri bagi
 					foreigners
 				</p>
@@ -135,10 +150,10 @@
 
 		<a
 			href="/programs/bipa"
-			class="group relative flex flex-col items-start gap-2.5 border border-transparent bg-gray-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 md:gap-5 2xl:flex-row"
+			class="group relative flex flex-col items-start gap-2.5 rounded-lg border border-transparent bg-slate-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 md:gap-5"
 		>
 			<svg
-				class="absolute right-4 top-4 h-5 w-5 text-gray-950 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100"
+				class="absolute right-4 top-4 h-5 w-5 text-slate-950 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100"
 				xmlns="http://www.w3.org/2000/svg"
 				fill="currentColor"
 				viewBox="0 0 256 256"
@@ -149,7 +164,7 @@
 			</svg>
 
 			<svg
-				class="h-12 w-12"
+				class="h-10 w-10"
 				stroke="currentColor"
 				viewBox="0 0 32 32"
 				fill="none"
@@ -181,7 +196,7 @@
 			<div class="flex-1 space-y-1">
 				<h5 class="text-lg font-semibold">BIPA</h5>
 
-				<p class="w-full text-sm leading-relaxed text-gray-600">
+				<p class="w-full text-sm leading-relaxed text-slate-600">
 					Pengajaran Bahasa Indonesia bagi penutur Internasional
 				</p>
 			</div>
@@ -189,10 +204,10 @@
 
 		<a
 			href="/programs/course"
-			class="group relative flex flex-col items-start gap-2.5 border border-transparent bg-gray-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 md:gap-5 2xl:flex-row"
+			class="group relative flex flex-col items-start gap-2.5 rounded-lg border border-transparent bg-slate-50 p-5 transition-all duration-300 ease-in-out hover:border-blue-950 md:gap-5"
 		>
 			<svg
-				class="absolute right-4 top-4 h-5 w-5 text-gray-950 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100"
+				class="absolute right-4 top-4 h-5 w-5 text-slate-950 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100"
 				xmlns="http://www.w3.org/2000/svg"
 				fill="currentColor"
 				viewBox="0 0 256 256"
@@ -203,7 +218,7 @@
 			</svg>
 
 			<svg
-				class="h-12 w-12"
+				class="h-10 w-10"
 				stroke="currentColor"
 				viewBox="0 0 32 32"
 				fill="none"
@@ -242,9 +257,9 @@
 			<div class="flex-1 space-y-1">
 				<h5 class="text-lg font-semibold">Course</h5>
 
-				<p class="w-full text-sm leading-relaxed text-gray-600">
-					Pelayanan kursus Bahasa Inggris dan Bahasa Mandarin dengan berbagai
-					level dan tingkatan
+				<p class="w-full text-sm leading-relaxed text-slate-600">
+					Kursus Bahasa Inggris dan Bahasa Mandarin dengan berbagai level dan
+					tingkatan
 				</p>
 			</div>
 		</a>

@@ -6,35 +6,24 @@
 	import Programs from './programs.svelte';
 	import News from './news.svelte';
 	import Partnership from './partnership.svelte';
-	import SocialMedia from './social-media.svelte';
+	import CallToAction from './call-to-action.svelte';
+	import type { PageData } from './$types';
 	//----------------------------------------------------------//
-	export let data;
 
-	let { header } = data;
-	//----------------------------------------------------------//
-	// let arr = ['aaa', 'bbb', 'ccc', 'ddd', 'eee'];
-	// arr.splice(3, 4);
-	//----------------------------------------------------------//
-	// $: innerWidth = 0;
+	export let data: PageData;
+	let { hero, partner, call_to_action, blogs } = data;
 
-	// console.log(innerWidth);
+	//----------------------------------------------------------//
 </script>
-
-<!--
-<svelte:window bind:innerWidth />
-
-<p>
-	{innerWidth}
-</p> -->
 
 <SeoHead title="Beranda" />
 
-<Header {header} />
+<Header data={hero} />
 
-<Partnership />
+<Partnership data={partner} />
 
 <Programs />
 
-<News />
+<News data={blogs} />
 
-<!-- <SocialMedia /> -->
+<CallToAction data={call_to_action} />

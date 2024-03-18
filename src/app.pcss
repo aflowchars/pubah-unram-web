@@ -72,44 +72,42 @@
 
 @layer base {
 	* {
-		@apply border-border font-inter tracking-[-2%];
+		@apply border-border font-inter tracking-tight;
 	}
 
 	body {
 		@apply bg-background text-gray-950;
 	}
-}
 
-@layer components {
-	article.content_wrap > *, article.content_wrap section > * {
-		@apply text-left text-base leading-loose text-gray-600 md:leading-loose md:text-lg;
+	.content_wrap > *, .content_wrap section > * {
+		@apply text-left text-base leading-loose text-gray-600;
 	}
 
-	article.content_wrap > section {
-		@apply mt-4;
+	.content_wrap > p, .content_wrap section > p {
+		@apply mt-1.5 !font-inter;
 	}
 
-	article.content_wrap > p, article.content_wrap section > p {
-		@apply mt-3.5;
+	.content_wrap > h3, .content_wrap section > h3 {
+		@apply text-xl my-2.5 font-semibold text-gray-950;
 	}
 
-	article.content_wrap > h3, article.content_wrap section > h3 {
-		@apply mb-1 text-xl font-semibold text-gray-950 md:text-2xl;
+	.content_wrap > h4, .content_wrap section > h4 {
+		@apply my-2.5 text-lg font-semibold text-gray-800;
 	}
 
-	article.content_wrap > h4, article.content_wrap section > h4 {
-		@apply my-1 text-xl font-semibold text-gray-800;
-	}
-
-	article.content_wrap > h5, article.content_wrap section > h5 {
+	.content_wrap > h5, .content_wrap section > h5 {
 		@apply my-1 font-medium;
 	}
 
-	article.content_wrap > ol, article.content_wrap section > ol {
-		@apply list-inside list-disc space-y-1.5 my-2.5;
+	.content_wrap > ol, .content_wrap section > ol {
+		@apply list-inside list-decimal space-y-1.5 my-2.5;
 	}
 
-	article.content_wrap > ul, article.content_wrap section > ul {
-		@apply list-inside list-decimal space-y-1.5;
+	.content_wrap > ul, .content_wrap section > ul {
+		@apply list-inside list-disc space-y-1.5;
+	}
+
+	.content_wrap > p >img, .content_wrap section > p > img {
+		@apply rounded-lg my-2.5;
 	}
 }

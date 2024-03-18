@@ -7,7 +7,7 @@
 </script>
 
 <nav
-	class="navbar fixed inset-0 z-50 flex h-20 w-full flex-col items-start bg-gray-50 md:h-20"
+	class="navbar fixed inset-0 z-50 flex h-20 w-full flex-col items-start overflow-hidden bg-slate-50 md:h-28"
 >
 	<NavbarTopbar datas={datas.topbar} />
 

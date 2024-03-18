@@ -9,7 +9,9 @@
 	let className: string | undefined | null = undefined;
 	export { className as class };
 
-	const { orientation, options, plugins, onInit } = getEmblaContext('<Carousel.Content/>');
+	const { orientation, options, plugins, onInit } = getEmblaContext(
+		'<Carousel.Content/>'
+	);
 </script>
 
 <div
@@ -26,7 +28,11 @@
 	on:emblaInit={onInit}
 >
 	<div
-		class={cn('flex', $orientation === 'horizontal' ? '-ml-0' : '-mt-4 flex-col', className)}
+		class={cn(
+			'relative flex',
+			$orientation === 'horizontal' ? '-ml-0' : '-mt-4 flex-col',
+			className
+		)}
 		data-embla-container=""
 		{...$$restProps}
 	>

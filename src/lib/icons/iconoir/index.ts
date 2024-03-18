@@ -4,6 +4,7 @@ import MenuScaleIconRegular from './menu-scale-icon-regular.svelte';
 import MoreHorizIconRegular from './more-horiz-icon-regular.svelte';
 import NavArrowDownIconRegular from './nav-arrow-down-icon-regular.svelte';
 import NavArrowLeftIconRegular from './nav-arrow-left-icon-regular.svelte';
+import NavArrowRightIconRegular from './nav-arrow-right-icon-regular.svelte';
 import SearchIconRegular from './search-icon-regular.svelte';
 import XMarkIconRegular from './x-mark-icon-regular.svelte';
 
@@ -14,6 +15,7 @@ export {
 	MoreHorizIconRegular,
 	NavArrowDownIconRegular,
 	NavArrowLeftIconRegular,
+	NavArrowRightIconRegular,
 	SearchIconRegular,
 	XMarkIconRegular
 };

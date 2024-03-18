@@ -5,7 +5,7 @@
 		buttonVariants
 	} from '$lib/components/ui/button/index.js';
 	import { cn } from '$lib/utils';
-	import { ArrowRight } from 'radix-icons-svelte';
+	import { ArrowRight, ChevronRight } from 'radix-icons-svelte';
 	import type { VariantProps } from 'tailwind-variants';
 	import { getEmblaContext } from './context.js';
 
@@ -25,10 +25,8 @@
 	{variant}
 	{size}
 	class={cn(
-		'absolute flex h-8 w-8 touch-manipulation items-center justify-center rounded-full',
-		$orientation === 'horizontal'
-			? 'right-5 top-1/2 -translate-y-1/2'
-			: '-bottom-5 left-1/2 -translate-x-1/2 rotate-90',
+		`border-1.5 relative flex h-8 w-8 touch-manipulation items-center justify-center rounded-full bg-white/0 hover:bg-white/15`,
+		$canScrollNext ? 'border-white' : 'border-white/25',
 		className
 	)}
 	disabled={!$canScrollNext}
@@ -36,6 +34,10 @@
 	on:keydown={handleKeyDown}
 	{...$$restProps}
 >
-	<ArrowRight class="h-4 w-4" />
+	<ChevronRight
+		class="h-5 w-5 {$canScrollNext ? 'text-white' : 'text-white/75'}"
+	/>
 	<span class="sr-only">Next slide</span>
 </Button>
+
+<!-- $orientation === 'horizontal' ? 'right-5 top-1/2 -translate-y-1/2' : '-bottom-5 left-1/2 -translate-x-1/2 rotate-90', -->

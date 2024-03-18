@@ -54,12 +54,18 @@ const config = {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+			boxShadow: {
+				xs: '0px 1px 2px 0px rgba(16, 24, 40, 0.05)'
+			},
 			fontFamily: {
 				sans: [...fontFamily.sans],
 				inter: ['Inter', ...fontFamily.sans]
 			},
 			strokeWidth: {
-				'1.5': '1.5px'
+				1.5: '1.5px'
+			},
+			borderWidth: {
+				1.5: '1.5px'
 			}
 		}
 	}

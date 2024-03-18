@@ -1,23 +1,27 @@
+import { PUBLIC_STRAPI_API, PUBLIC_STRAPI_BASE } from '$env/static/public';
+
 /** @type {import('./$types').PageLoad} */
-export function load() {
-	return {
+export async function load({ fetch }) {
+	const response = await fetch(
+		`${PUBLIC_STRAPI_API}/program-bipa?populate[0]=hero&populate[1]=hero.thumbnail&populate[2]=nav_page&populate[3]=nav_page.prev&populate[4]=nav_page.next`
+	);
+	const data = await response.json();
+
+	const datas = data.data.attributes;
+
+	const programs = {
 		hero: {
-			id: 1,
-			src: 'https://images.unsplash.com/photo-1609980431579-9c28eb579400?q=80&w=2084&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-			alt: 'Bahasa Indonesia Bagi Penutur Asing',
-			title: 'Bahasa Indonesia bagi Penutur Asing (BIPA)',
-			description: `Proses pembelajaran dan
-            penggunaan bahasa resmi Republik Indonesia oleh individu yang bukan asli penuturnya.`
+			id: datas?.hero?.id,
+			src: `${PUBLIC_STRAPI_BASE}${datas?.hero?.thumbnail?.data?.attributes?.url}`,
+			alt: datas?.hero?.thumbnail?.data?.attributes?.alternativeText,
+			title: datas?.hero?.title,
+			description: datas?.hero?.description
 		},
-		nav_page: {
-            left: {
-                link: '/programs/resource-centre-&-self-access-centre',
-                label: 'BIPA'
-            },
-            right: {
-                link: '/programs/course',
-                label: 'Course'
-            }
-        }
+		content: datas?.content,
+		nav_page: datas?.nav_page
+	};
+
+	return {
+		programs
 	};
 }

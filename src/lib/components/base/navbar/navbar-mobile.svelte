@@ -59,7 +59,7 @@
 			<button
 				type="button"
 				on:click={() => isMobileNav.set(false)}
-				class="flex h-8 w-8 items-center justify-center rounded-full border border-gray-300"
+				class="flex h-8 w-8 items-center justify-center rounded-full border border-slate-300"
 			>
 				<XMarkIconRegular class="h-6 w-6 stroke-2" />
 			</button>
@@ -77,7 +77,7 @@
 									isMobileNav.set(false);
 								}, 500)}
 							href={menu.link}
-							class="w-full border-b border-gray-200 py-5 text-lg font-medium tracking-tight md:px-5 md:py-5 md:text-2xl lg:py-5 lg:text-3xl"
+							class="w-full border-b border-slate-200 py-5 text-lg font-medium tracking-tight md:px-5 md:py-5 md:text-2xl lg:py-5 lg:text-3xl"
 						>
 							{menu.label}
 						</a>
@@ -86,7 +86,7 @@
 							<Accordion.Item value="item-1" class="w-full border-b-0">
 								<Accordion.Trigger
 									showIcon={false}
-									class="w-full border-b border-gray-200 py-5 font-medium tracking-tight md:px-5 md:py-5 lg:py-5"
+									class="w-full border-b border-slate-200 py-5 font-medium tracking-tight md:px-5 md:py-5 lg:py-5"
 								>
 									<span
 										class="text-lg font-medium tracking-tight md:text-2xl lg:text-3xl"
@@ -110,7 +110,7 @@
 														isMobileNav.set(false);
 													}, 500)}
 												href={child.link}
-												class="py-2.5 text-base text-gray-600 lg:text-lg"
+												class="py-2.5 text-base text-slate-600 lg:text-lg"
 											>
 												{child.label}
 											</a>

@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	import { SeoHead } from '$lib/components/base';
 	import * as Popover from '$lib/components/ui/popover';
+	import { PUBLIC_STRAPI_BASE } from '$env/static/public';
 
 	let showCopyLink = false;
 
@@ -17,23 +18,23 @@
 
 	export let data;
 
-	let slug = data?.post[0]?.title?.rendered;
+	const { category, content, hero, title, blogs } = data.blog;
 </script>
 
-<SeoHead title={slug} />
+<SeoHead {title} />
 
-<div class="container mx-auto w-full max-w-screen-2xl px-0 md:px-10">
+<div class="container mx-auto w-full max-w-screen-xl px-0 md:px-10">
 	<header
-		class="relative h-[50vh] w-full overflow-hidden sm:h-[75vh] md:h-[50vh] lg:h-[60vh] xl:h-[75vh]"
+		class="relative h-[50vh] w-full overflow-hidden rounded-b-xl sm:h-[75vh] md:h-[50vh] lg:h-[60vh] xl:h-[65vh]"
 	>
 		<div
-			class="absolute z-10 h-full w-full bg-gradient-to-t from-gray-950/80 to-gray-950/15"
+			class="absolute z-10 h-full w-full bg-gradient-to-t from-slate-950/75 to-slate-950/15"
 		/>
 
 		<img
 			class="relative z-0 h-full w-full object-cover object-top"
-			src={data?.featuredMedia}
-			alt="Yudisium 2"
+			src={`${PUBLIC_STRAPI_BASE}${hero?.thumbnail?.data?.attributes?.url}`}
+			alt={hero?.thumbnail?.data?.attributes?.alternativeText}
 		/>
 
 		<div
@@ -45,17 +46,16 @@
 				<div />
 
 				<div class="flex flex-col items-center gap-1">
-					<a
-						href={data?.category?.link || '/'}
-						class="rounded-full bg-amber-400 px-2 py-1 text-xs font-semibold text-gray-950 md:px-3 md:py-1.5 xl:text-sm"
+					<div
+						class="rounded-full bg-amber-400 px-2 py-1 text-xs font-semibold text-slate-950 md:px-3 md:py-1.5 xl:text-sm"
 					>
-						{data?.category?.name || 'Ini Kategori'}
-					</a>
+						{category || 'Ini Kategori'}
+					</div>
 
 					<h1
 						class="mt-1.5 text-center text-lg font-semibold leading-normal text-white md:text-3xl md:leading-normal xl:text-4xl xl:leading-normal"
 					>
-						{data?.post[0]?.title?.rendered || 'Ini Judul'}
+						{title || 'Ini Judul'}
 					</h1>
 				</div>
 
@@ -67,15 +67,16 @@
 							class="relative h-9 w-9 overflow-hidden rounded-full md:h-10 md:w-10 xl:h-12 xl:w-12"
 						>
 							<img
-								src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-								alt="Avatar 1"
+								src={`${PUBLIC_STRAPI_BASE}${hero?.author?.avatar?.data?.attributes?.url || '/images/default-avatar.png'}`}
+								alt={hero?.author?.data?.attributes?.name}
 							/>
 						</div>
 
 						<div class="text-white">
-							<h5 class="text-sm font-semibold">Olivia Rhye</h5>
-							<p class="text-xs text-gray-300">
-								{data?.createdAt || 'Ini Tanggal'}
+							<h5 class="text-sm font-semibold">{hero?.author?.name}</h5>
+
+							<p class="text-xs text-slate-300">
+								{hero?.author?.date || 'Ini Tanggal'}
 							</p>
 						</div>
 					</section>
@@ -83,7 +84,7 @@
 					<Popover.Root bind:open={showCopyLink}>
 						<Popover.Trigger
 							on:click={copyToClipboard}
-							class="relative flex items-center gap-1 rounded-md border border-blue-950 bg-gray-100 px-3 py-2 text-blue-950 shadow-md md:px-4 md:py-2.5"
+							class="relative flex items-center gap-1 rounded-md border border-blue-950 bg-slate-100 px-3 py-2 text-blue-950 shadow-md md:px-4 md:py-2.5"
 						>
 							<svg
 								class="h-4 w-4"
@@ -128,38 +129,91 @@
 	class="container mx-auto mt-5 max-w-screen-lg px-5 md:px-10 lg:mt-8 xl:mt-10"
 >
 	<article class="content_wrap">
-		{@html data?.post[0]?.content?.rendered}
+		{@html content}
 	</article>
 </div>
 
-<div
-	class="container mx-auto mt-8 max-w-screen-2xl px-5 pt-5 md:mt-10 md:px-10"
->
+<div class="container mx-auto mb-20 max-w-screen-xl px-5 md:mt-10 md:px-16">
+	<div class="py-5 md:py-10">
+		<div class="h-px w-full bg-slate-100"></div>
+	</div>
+
 	<h3 class="text-2xl font-semibold">Berita Lainnya</h3>
 
 	<div
-		class="mt-5 grid w-full grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4 xl:gap-2.5"
+		class="mt-5 grid w-full grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3 xl:gap-2.5"
 	>
-		{#each [1, 2, 3, 4] as item}
+		{#each blogs.data as news}
 			<a
-				href="/news/luluskan-249-mahasiswa-dekan-berpesan-nasib-baik-berawal-dari-ikhtiar"
-				class="border border-transparent transition-all duration-300 ease-in-out xl:p-1 xl:hover:border-gray-950"
+				href="/news/{news?.attributes?.slug}"
+				class="group relative rounded-lg border border-transparent bg-slate-100 p-2 pb-6 transition-all duration-300 ease-in-out hover:border-slate-950"
 			>
-				<picture>
+				<div
+					class="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center opacity-0 transition-all duration-500 ease-in-out group-hover:opacity-100"
+				>
+					<svg
+						class="h-6 w-6 stroke-1.5 text-slate-950"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M9.17137 14.8284L14.8282 9.17152M14.8282 9.17152H9.87848M14.8282 9.17152V14.1213"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+						<path
+							d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+				</div>
+
+				<div class="relative h-64 w-full overflow-hidden rounded-lg">
 					<img
-						src="https://fkip.unram.ac.id/wp-content/uploads/2024/02/yudiisum2.jpg"
+						class="relative z-0 h-full w-full object-cover"
+						src={`${PUBLIC_STRAPI_BASE}${news?.attributes?.hero?.thumbnail?.data?.attributes?.url}`}
 						alt="yudisium-2"
 					/>
-				</picture>
 
-				<div class="space-y-5 p-1 pt-3 xl:pb-6">
-					<h5 class="line-clamp-2 text-base font-medium">
-						Luluskan 249 Mahasiswa, Dekan Berpesan, Nasib Baik berawal dari
-						Ikhtiar
+					<div
+						class="absolute left-3 top-3 z-10 rounded-full bg-amber-300 px-3 py-1.5 text-[0.675rem] font-bold"
+					>
+						{news?.attributes?.category}
+					</div>
+				</div>
+
+				<div class="mt-4 space-y-3 p-1">
+					<h5 class="line-clamp-2 text-base font-semibold">
+						{news?.attributes?.title || 'Ini Judul'}
 					</h5>
 
-					<p class="text-sm font-medium text-gray-600">2 jam yang lalu</p>
+					<p class="line-clamp-2 text-sm font-medium text-slate-600">
+						{news?.attributes?.excerpt || 'Ini Deskripsi'}
+					</p>
 				</div>
+
+				<section class="mt-6 flex items-end gap-2.5">
+					<div class="relative h-8 w-8 overflow-hidden rounded-full">
+						<img
+							class="h-full w-full object-cover"
+							src={`${PUBLIC_STRAPI_BASE}${news?.attributes?.hero?.author?.avatar?.data?.attributes?.url}`}
+							alt={news?.attributes?.hero?.author?.avatar?.data?.attributes
+								?.alternativeText}
+						/>
+					</div>
+
+					<div class="-mb-0.5">
+						<h6 class="text-xs font-semibold">
+							{news?.attributes?.hero?.author?.name}
+						</h6>
+						<p class="text-xs font-medium text-slate-600">
+							{news?.attributes?.hero?.author?.date}
+						</p>
+					</div>
+				</section>
 			</a>
 		{/each}
 	</div>

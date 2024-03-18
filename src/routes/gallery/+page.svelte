@@ -4,7 +4,7 @@
 
 <SeoHead title="Galeri" />
 
-<div class="min-h-screen pt-5 xl:pt-20">
+<div class="min-h-screen py-10">
 	<div
 		class="container mx-auto min-h-screen max-w-screen-xl space-y-2.5 px-5 md:px-10 xl:space-y-5"
 	>

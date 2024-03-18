@@ -1,31 +1,13 @@
+import { PUBLIC_STRAPI_API } from '$env/static/public';
+
 /** @type {import('./$types').PageLoad} */
-export function load() {
-	return {
-		header: [
-			{
-				id: 1,
-				image: {
-					src: '/assets/home/hero-1.jpg',
-					alt: 'pubah 1'
-				},
-				tag: 'Program',
-				title: 'Program in-Country Bahasa Indonesia bagi Penutur Asing',
-				description:
-					'Program bahasa in-country bagi penutur asing adalah program di mana pembelajar bahasa asing tinggal dan belajar di negara yang menjadi sumber bahasa yang dipelajari. Program semacam ini memberikan pengalaman langsung dalam penggunaan bahasa target dalam konteks sehari-hari dan budaya lokal.',
-				link: '/programs/bipa'
-			},
-			{
-				id: 1,
-				image: {
-					src: '/assets/home/hero-2.jpg',
-					alt: 'pubah 2'
-				},
-				tag: 'Program',
-				title: 'Program TOEFL Preparation',
-				description:
-					'TOEFL Preparation adalah program yang dirancang untuk membantu calon peserta tes TOEFL meningkatkan kemampuan bahasa Inggris mereka melalui latihan mendalam, familiarisasi dengan format tes, dan strategi khusus dalam menjawab pertanyaan TOEFL.',
-				link: '/programs/course'
-			}
-		]
-	};
+export async function load({ fetch }) {
+	const response = await fetch(
+		`${PUBLIC_STRAPI_API}/home?populate[0]=hero&populate[1]=hero.thumbnail&populate[2]=partner&populate[3]=partner.image&populate[4]=call_to_action&populate[5]=call_to_action.link&populate[6]=blogs&populate[7]=blogs.hero.thumbnail&populate[8]=blogs.hero.author&populate[9]=blogs.hero.author.avatar`
+	);
+	const data = await response?.json();
+
+	const { hero, partner, call_to_action, blogs } = data.data.attributes;
+
+	return { hero, partner, call_to_action, blogs };
 }

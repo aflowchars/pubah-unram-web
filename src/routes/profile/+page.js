@@ -1,22 +1,39 @@
+import { PUBLIC_STRAPI_API, PUBLIC_STRAPI_BASE } from '$env/static/public';
+
 /** @type {import('./$types').PageLoad} */
-export function load() {
-	return {
+export async function load({ fetch }) {
+	const request = await fetch(
+		`${PUBLIC_STRAPI_API}/profile?populate[0]=hero&populate[1]=hero.thumbnail&locale=id&populate[2]=details`
+	);
+
+	const data = await request.json();
+
+	const { hero, content, details } = data.data.attributes;
+
+	const profile = {
 		hero: {
-			id: 1,
-			src: 'https://images.unsplash.com/photo-1447069387593-a5de0862481e?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-			alt: 'Profile Pusat Bahasa Unram',
-			title: 'Profil UPA Bahasa Unram',
-			description: `Profil dari Pusat Bahasa yang merupakan salah satu institusi yang mewadahi berbagai program bahasa.`
+			title: hero?.title,
+			description: hero?.description,
+			image: {
+				src: `${PUBLIC_STRAPI_BASE}${hero?.thumbnail?.data?.attributes?.url}`,
+				alt: hero?.thumbnail?.data?.attributes?.alternativeText
+			}
 		},
+		content: content,
+		details: details,
 		nav_page: {
-			left: {
-				link: '/programs/resource-centre-&-self-access-centre',
-				label: 'BIPA'
+			prev: {
+				link: '/gallery',
+				label: 'Galeri'
 			},
-			right: {
-				link: '/programs/course',
-				label: 'Course'
+			next: {
+				link: '/programs',
+				label: 'Programs'
 			}
 		}
+	};
+
+	return {
+		profile
 	};
 }
